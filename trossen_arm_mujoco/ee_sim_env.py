@@ -202,22 +202,32 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
         """
         self.initialize_robots(physics)
         # randomize box position
-        cube_pose = sample_box_pose()
-        box_start_idx = physics.model.name2id("red_box_joint", "joint")
-        np.copyto(physics.data.qpos[box_start_idx : box_start_idx + 7], cube_pose)
+        blue_cube_pose = np.array([0.1, 0.0, 0.0325, 1, 0, 0, 0])
+        blue_start_idx = physics.model.name2id("blue_box_joint", "joint")
+        np.copyto(physics.data.qpos[blue_start_idx : blue_start_idx + 7], blue_cube_pose)
+
+        # randomize box position
+        red_cube_pose = sample_box_pose()
+        red_start_idx = physics.model.name2id("red_box_joint", "joint")
+        np.copyto(physics.data.qpos[red_start_idx : red_start_idx + 7], red_cube_pose)
 
         super().initialize_episode(physics)
 
     @staticmethod
     def get_env_state(physics: Physics) -> np.ndarray:
-        """
-        Retrieve the environment state specific to this task.
+        red_adr = physics.model.jnt_qposadr[
+            physics.model.name2id("red_box_joint", "joint")
+        ]
+        blue_adr = physics.model.jnt_qposadr[
+            physics.model.name2id("blue_box_joint", "joint")
+        ]
 
-        :param physics: The simulation physics engine.
-        :return: The state of the environment.
-        """
-        env_state = physics.data.qpos.copy()[16:]
-        return env_state
+        return np.concatenate([
+            physics.data.qpos[red_adr : red_adr + 7],   # red cube pose
+            physics.data.qpos[blue_adr : blue_adr + 7],# blue cube pose
+        ])
+
+
 
     def get_reward(self, physics: Physics) -> int:
         """
@@ -235,6 +245,15 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
             name_geom_2 = physics.model.id2name(id_geom_2, "geom")
             contact_pair = (name_geom_1, name_geom_2)
             all_contact_pairs.append(contact_pair)
+        """
+        all contact pairs: 
+        [
+        ('tabletop', 'red_box'), 
+        ('tabletop', 'blue_box'), 
+        ('tabletop', 'blue_box'), 
+        ('tabletop', 'blue_box'), 
+        ('tabletop', 'blue_box')]
+        """
         touch_left_gripper = any(
             ("red_box" in pair and "follower_left_gripper" in pair[0] + pair[1])
             for pair in all_contact_pairs

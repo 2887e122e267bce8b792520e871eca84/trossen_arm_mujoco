@@ -194,22 +194,28 @@ class TransferCubeTask(TrossenAIStationaryTask):
         # TODO Notice: this function does not randomize the env configuration. Instead, set
         # BOX_POSE from outside reset qpos, control and box position
         with physics.reset_context():
+            print(f'Physics context: {physics.named.data.qpos}')
             physics.named.data.qpos[:16] = START_ARM_POSE
             assert BOX_POSE[0] is not None
-            physics.named.data.qpos[-7:] = BOX_POSE[0]
+            physics.named.data.qpos[-14:] = BOX_POSE[0]
 
         super().initialize_episode(physics)
 
     @staticmethod
     def get_env_state(physics: Physics) -> np.ndarray:
-        """
-        Retrieves the environment state related to the cube position.
+        red_adr = physics.model.jnt_qposadr[
+            physics.model.name2id("red_box_joint", "joint")
+        ]
+        blue_adr = physics.model.jnt_qposadr[
+            physics.model.name2id("blue_box_joint", "joint")
+        ]
 
-        :param physics: The MuJoCo physics simulation instance.
-        :return: The environment state.
-        """
-        env_state = physics.data.qpos.copy()[16:]
-        return env_state
+        return np.concatenate([
+            physics.data.qpos[red_adr : red_adr + 7],   # red cube pose
+            physics.data.qpos[blue_adr : blue_adr + 7],# blue cube pose
+        ])
+
+
 
     def get_reward(self, physics: Physics) -> int:
         """

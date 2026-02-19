@@ -38,7 +38,7 @@ ROOT_DIR = os.path.expanduser("~/.trossen/mujoco/data/")
 SIM_TASK_CONFIGS = {
     "sim_transfer_cube": {
         "num_episodes": 1,
-        "episode_len": 600,
+        "episode_len": 900,
         "onscreen_render": False,
         "inject_noise": False,
         "cam_names": ["cam_high", "cam_low", "cam_left_wrist", "cam_right_wrist"],

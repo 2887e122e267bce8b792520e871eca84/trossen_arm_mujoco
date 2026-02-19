@@ -144,18 +144,31 @@ class PickAndTransferPolicy(BasePolicy):
         init_mocap_pose_left = ts_first.observation["mocap_pose_left"]
 
         box_info = np.array(ts_first.observation["env_state"])
-        box_xyz = box_info[:3]
-        print(f"Generate trajectory for {box_xyz=}")
+        red_xyz  = box_info[0:3]
+        blue_xyz = box_info[7:10]
+
+        print(f"Generate trajectory for red {red_xyz=}")
+        print(f"Generate trajectory for blue {blue_xyz=}")
 
         gripper_pick_quat = Quaternion(init_mocap_pose_right[3:])
         gripper_pick_quat = gripper_pick_quat * Quaternion(
             axis=[1.0, 0.0, 0.0], degrees=-45
         )
 
+        CUBE_HALF = 0.0125
+        STACK_Z = blue_xyz[2] + 2 * CUBE_HALF + 0.002  # small clearance
+
+        stack_xyz = np.array([
+            blue_xyz[0],
+            blue_xyz[1],
+            STACK_Z,
+        ])
+
+
         meet_left_quat = Quaternion(axis=[0.0, 1.0, 0.0], degrees=-90)
 
         meet_xyz = np.array([0.0, 0.0, 0.3])
-
+        place_quat = Quaternion(axis=[0, 1, 0], degrees=-90).elements
         self.left_trajectory = [
             {
                 "t": 0,
@@ -222,43 +235,43 @@ class PickAndTransferPolicy(BasePolicy):
             },  # open gripper
             {
                 "t": 80,
-                "xyz": box_xyz + np.array([0, 0, 0.2]),
+                "xyz": red_xyz + np.array([0, 0, 0.2]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # approach the cube
             {
                 "t": 120,
-                "xyz": box_xyz + np.array([0, 0, 0.2]),
+                "xyz": red_xyz + np.array([0, 0, 0.2]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # stay for a while
             {
                 "t": 160,
-                "xyz": box_xyz + np.array([0, 0, 0.05]),
+                "xyz": red_xyz + np.array([0, 0, 0.05]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # go down
             {
                 "t": 200,
-                "xyz": box_xyz + np.array([0, 0, 0.02]),
+                "xyz": red_xyz + np.array([0, 0, 0.02]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # go down
             {
                 "t": 220,
-                "xyz": box_xyz + np.array([0, 0, -0.0125]),
+                "xyz": red_xyz + np.array([0, 0, -0.0125]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # go down
             {
                 "t": 240,
-                "xyz": box_xyz + np.array([0, 0, -0.0125]),
+                "xyz": red_xyz + np.array([0, 0, -0.0125]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.012,
             },  # close gripper
             {
                 "t": 280,
-                "xyz": box_xyz + np.array([0, 0, -0.0125]),
+                "xyz": red_xyz + np.array([0, 0, -0.0125]),
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.012,
             },  # Stay there for a while
@@ -304,7 +317,58 @@ class PickAndTransferPolicy(BasePolicy):
                 "quat": gripper_pick_quat.elements,
                 "gripper": 0.044,
             },  # stay
+            {
+                "t": 900,
+                "xyz": meet_xyz + np.array([0, -0.2, 0]),
+                "quat": gripper_pick_quat.elements,
+                "gripper": 0.044,
+            }
         ]
+
+        place_quat = Quaternion(axis=[0, 1, 0], degrees=-90).elements
+
+        self.left_trajectory.extend([
+            {
+                "t": 650,
+                "xyz": stack_xyz + np.array([0, 0, 0.10]),
+                "quat": place_quat,
+                "gripper": 0.012,
+            },  # move above blue cube
+            {
+                "t": 720,
+                "xyz": stack_xyz + np.array([0, 0, 0.02]),
+                "quat": place_quat,
+                "gripper": 0.012,
+            },  # descend
+            {
+                "t": 780,
+                "xyz": stack_xyz,
+                "quat": place_quat,
+                "gripper": 0.012,
+            },  # place
+            {
+                "t": 820,
+                "xyz": stack_xyz,
+                "quat": place_quat,
+                "gripper": 0.044,
+            },  # release
+            {
+                "t": 900,
+                "xyz": stack_xyz + np.array([0, 0, 0.15]),
+                "quat": place_quat,
+                "gripper": 0.044,
+            },  # retreat
+        ])
+        self.right_trajectory.append(
+            {
+                "t": 900,
+                "xyz": meet_xyz + np.array([0, -0.2, 0]),
+                "quat": gripper_pick_quat.elements,
+                "gripper": 0.044,
+            }
+        )
+
+
 
 
 def test_policy(

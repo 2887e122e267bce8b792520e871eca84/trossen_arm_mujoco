@@ -144,19 +144,23 @@ class PickAndTransferPolicy(BasePolicy):
         init_mocap_pose_left = ts_first.observation["mocap_pose_left"]
 
         box_info = np.array(ts_first.observation["env_state"])
+
+        # Get the initial coordinates of the boxes
         red_xyz  = box_info[0:3]
         blue_xyz = box_info[7:10]
 
         print(f"Generate trajectory for red {red_xyz=}")
         print(f"Generate trajectory for blue {blue_xyz=}")
 
+        # Get original pose and rotate it -45 degrees around the X-axis
         gripper_pick_quat = Quaternion(init_mocap_pose_right[3:])
         gripper_pick_quat = gripper_pick_quat * Quaternion(
             axis=[1.0, 0.0, 0.0], degrees=-45
         )
 
+        # Define the stack_z coordinates from the size of the box
         CUBE_HALF = 0.0125
-        STACK_Z = blue_xyz[2] + 2 * CUBE_HALF + 0.002  # small clearance
+        STACK_Z = blue_xyz[2] + 2 * CUBE_HALF + 0.015  # small clearance
 
         stack_xyz = np.array([
             blue_xyz[0],
@@ -164,11 +168,12 @@ class PickAndTransferPolicy(BasePolicy):
             STACK_Z,
         ])
 
-
+        # The orientation of the left gripper
         meet_left_quat = Quaternion(axis=[0.0, 1.0, 0.0], degrees=-90)
 
+        # The meeting point is above the origin, 0.3 units in height
         meet_xyz = np.array([0.0, 0.0, 0.3])
-        place_quat = Quaternion(axis=[0, 1, 0], degrees=-90).elements
+
         self.left_trajectory = [
             {
                 "t": 0,
@@ -318,14 +323,14 @@ class PickAndTransferPolicy(BasePolicy):
                 "gripper": 0.044,
             },  # stay
             {
-                "t": 900,
-                "xyz": meet_xyz + np.array([0, -0.2, 0]),
-                "quat": gripper_pick_quat.elements,
-                "gripper": 0.044,
-            }
+                "t": 850,
+                "xyz": init_mocap_pose_right[:3],
+                "quat": init_mocap_pose_right[3:],
+                "gripper": 0,
+            },  # sleep
         ]
 
-        place_quat = Quaternion(axis=[0, 1, 0], degrees=-90).elements
+        place_quat = np.array([1, 0, 0, 0])
 
         self.left_trajectory.extend([
             {
@@ -335,38 +340,30 @@ class PickAndTransferPolicy(BasePolicy):
                 "gripper": 0.012,
             },  # move above blue cube
             {
-                "t": 720,
+                "t": 700,
                 "xyz": stack_xyz + np.array([0, 0, 0.02]),
                 "quat": place_quat,
                 "gripper": 0.012,
             },  # descend
             {
-                "t": 780,
+                "t": 750,
                 "xyz": stack_xyz,
                 "quat": place_quat,
                 "gripper": 0.012,
             },  # place
             {
-                "t": 820,
+                "t": 800,
                 "xyz": stack_xyz,
                 "quat": place_quat,
                 "gripper": 0.044,
             },  # release
             {
-                "t": 900,
-                "xyz": stack_xyz + np.array([0, 0, 0.15]),
-                "quat": place_quat,
-                "gripper": 0.044,
-            },  # retreat
+                "t": 850,
+                "xyz": init_mocap_pose_left[:3],
+                "quat": init_mocap_pose_left[3:],
+                "gripper": 0,
+            },  # sleep
         ])
-        self.right_trajectory.append(
-            {
-                "t": 900,
-                "xyz": meet_xyz + np.array([0, -0.2, 0]),
-                "quat": gripper_pick_quat.elements,
-                "gripper": 0.044,
-            }
-        )
 
 
 
@@ -414,6 +411,7 @@ def test_policy(
         plt.close()
 
         episode_return = np.sum([ts.reward for ts in episode[1:]])
+        print(f"Episode Rewards: {episode_return}")
         if episode_return > 0:
             print(f"{episode_idx=} Successful, {episode_return=}")
         else:

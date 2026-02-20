@@ -183,7 +183,7 @@ class TransferCubeTask(TrossenAIStationaryTask):
             onscreen_render=onscreen_render,
             cam_list=cam_list,
         )
-        self.max_reward = 4
+        self.max_reward = 5
 
     def initialize_episode(self, physics: Physics) -> None:
         """
@@ -194,7 +194,6 @@ class TransferCubeTask(TrossenAIStationaryTask):
         # TODO Notice: this function does not randomize the env configuration. Instead, set
         # BOX_POSE from outside reset qpos, control and box position
         with physics.reset_context():
-            print(f'Physics context: {physics.named.data.qpos}')
             physics.named.data.qpos[:16] = START_ARM_POSE
             assert BOX_POSE[0] is not None
             physics.named.data.qpos[-14:] = BOX_POSE[0]
@@ -245,6 +244,17 @@ class TransferCubeTask(TrossenAIStationaryTask):
             ("red_box" in pair and "tabletop" in pair[0] + pair[1])
             for pair in all_contact_pairs
         )
+        blue_and_red_contact = any(
+            ("red_box" in pair and "blue_box" in pair[0] + pair[1])
+            for pair in all_contact_pairs
+        )
+
+
+        red_adr = physics.model.jnt_qposadr[physics.model.name2id("red_box_joint", "joint")]
+        blue_adr = physics.model.jnt_qposadr[physics.model.name2id("blue_box_joint", "joint")]
+
+        red_xyz = physics.data.qpos[red_adr:red_adr + 3]
+        blue_xyz = physics.data.qpos[blue_adr:blue_adr + 3]
 
         reward = 0
         if touch_right_gripper:
@@ -258,6 +268,8 @@ class TransferCubeTask(TrossenAIStationaryTask):
         # successful transfer
         if touch_left_gripper and not touch_table:
             reward = 4
+        if blue_and_red_contact and red_xyz[2] > blue_xyz[2]:
+            reward = 5
         return reward
 
 

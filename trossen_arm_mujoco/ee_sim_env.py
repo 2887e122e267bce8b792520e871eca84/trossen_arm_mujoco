@@ -192,7 +192,7 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
             onscreen_render=onscreen_render,
             cam_list=cam_list,
         )
-        self.max_reward = 4
+        self.max_reward = 5
 
     def initialize_episode(self, physics: Physics) -> None:
         """
@@ -201,12 +201,12 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
         :param physics: The simulation physics engine.
         """
         self.initialize_robots(physics)
-        # randomize box position
+        # Blue box - fixed position
         blue_cube_pose = np.array([0.1, 0.0, 0.0325, 1, 0, 0, 0])
         blue_start_idx = physics.model.name2id("blue_box_joint", "joint")
         np.copyto(physics.data.qpos[blue_start_idx : blue_start_idx + 7], blue_cube_pose)
 
-        # randomize box position
+        # Red box - randomize position
         red_cube_pose = sample_box_pose()
         red_start_idx = physics.model.name2id("red_box_joint", "joint")
         np.copyto(physics.data.qpos[red_start_idx : red_start_idx + 7], red_cube_pose)
@@ -245,15 +245,7 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
             name_geom_2 = physics.model.id2name(id_geom_2, "geom")
             contact_pair = (name_geom_1, name_geom_2)
             all_contact_pairs.append(contact_pair)
-        """
-        all contact pairs: 
-        [
-        ('tabletop', 'red_box'), 
-        ('tabletop', 'blue_box'), 
-        ('tabletop', 'blue_box'), 
-        ('tabletop', 'blue_box'), 
-        ('tabletop', 'blue_box')]
-        """
+        print(f"Contact Pairs: {all_contact_pairs}")
         touch_left_gripper = any(
             ("red_box" in pair and "follower_left_gripper" in pair[0] + pair[1])
             for pair in all_contact_pairs
@@ -266,6 +258,10 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
             ("red_box" in pair and "tabletop" in pair[0] + pair[1])
             for pair in all_contact_pairs
         )
+        blue_and_red_contact = any(
+            ("red_box" in pair and "blue_box" in pair[0] + pair[1])
+            for pair in all_contact_pairs
+        )
 
         reward = 0
         if touch_right_gripper:
@@ -276,6 +272,8 @@ class TransferCubeEETask(TrossenAIStationaryEETask):
             reward = 3
         if touch_left_gripper and not touch_table:  # successful transfer
             reward = 4
+        if blue_and_red_contact:
+            reward = 5
         return reward
 
 

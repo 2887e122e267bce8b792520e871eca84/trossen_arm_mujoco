@@ -1,0 +1,1367 @@
+<?xml version="1.0" ?>
+<robot name="converted_robot">
+   <!--generated with mjcf_urdf_simple_converter (https://github.com/Yasu31/mjcf_urdf_simple_converter)-->
+   <link name="world">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="armor_kit_link">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="world2armor_kit_link_fixed">
+      <parent link="world"/>
+      <child link="armor_kit_link"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_assy">
+      <inertial>
+         <origin xyz="-0.0014480385921171244 -0.5614171732203144 0.009088508899344289" rpy="0.713440563619661 -1.5096142926700031 0.8467102282741614"/>
+         <mass value="354.47703781789306"/>
+         <inertia ixx="41.65180076851284" iyy="37.40389252296048" izz="12.632981510657226" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="F0_Follower_Assy_0">
+         <origin xyz="0.2149999999999997 -0.9799999999999991 0.2999999999999997" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_0_898989ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="F0_Follower_Assy_1">
+         <origin xyz="0.0009659042985015042 -0.538527915364622 -0.009105734209703883" rpy="-3.0509121033873403 -1.5564886347233338 -1.659878661997745"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_1_bebcbaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="F0_Follower_Assy_2">
+         <origin xyz="-0.005269189230116805 -0.5955835259143561 0.03628166674665343" rpy="0.35284689516277556 -1.442380924203551 1.184943763812289"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_2_fefeffff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="F0_Follower_Assy_0">
+         <origin xyz="0.2149999999999997 -0.9799999999999991 0.2999999999999997" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_0_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="F0_Follower_Assy_1">
+         <origin xyz="0.0009659042985015042 -0.538527915364622 -0.009105734209703883" rpy="-3.0509121033873403 -1.5564886347233338 -1.659878661997745"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_1_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="F0_Follower_Assy_2">
+         <origin xyz="-0.005269189230116805 -0.5955835259143561 0.03628166674665343" rpy="0.35284689516277556 -1.442380924203551 1.184943763812289"/>
+         <geometry>
+            <mesh filename="meshes/converted_F0_Follower_Assy_2_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="armor_kit_link2follower_assy_fixed">
+      <parent link="armor_kit_link"/>
+      <child link="follower_assy"/>
+      <origin xyz="0.0 0.0 0.993" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+   </joint>
+   <link name="follower_left_base_link">
+      <inertial>
+         <origin xyz="-0.00014175 -5.228e-05 0.03175177" rpy="-1.721371549848886 -1.548158297680064 0.1466629698349453"/>
+         <mass value="0.45969858"/>
+         <inertia ixx="0.000213926" iyy="0.000416701" izz="0.000448963" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_link">
+         <origin xyz="0.0010981177329573565 5.5379658459512283e-14 0.027120937276362535" rpy="-0.3445888307125494 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_base_link_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="armor_kit_link2follower_left_base_link_fixed">
+      <parent link="armor_kit_link"/>
+      <child link="follower_left_base_link"/>
+      <origin xyz="0.1725 -0.0175 0.993" rpy="0.0 0.0 -1.5707963267948957"/>
+   </joint>
+   <link name="follower_left_link_1">
+      <inertial>
+         <origin xyz="-0.00011075 0.00171176 0.0204459" rpy="-1.594672255731402 -0.9064747536902737 3.1395089292545397"/>
+         <mass value="0.152704"/>
+         <inertia ixx="0.000203432" iyy="0.000173907" izz="8.3521e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_1">
+         <origin xyz="0.004177459697505119 0.0010394651203662053 0.024668777663402044" rpy="1.576169235560362 0.7774652998389691 -0.0036088379142910076"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_1_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_0_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_0">
+      <parent link="follower_left_base_link"/>
+      <child link="follower_left_joint_0_jointbody"/>
+      <origin xyz="0.0 0.0 0.05725" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.05433" upper="3.05433" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_0_offset">
+      <parent link="follower_left_joint_0_jointbody"/>
+      <child link="follower_left_link_1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_link_2">
+      <inertial>
+         <origin xyz="-0.131215 -0.00292583 0.00021345" rpy="-1.1232308506152693 -1.5671388990308042 -2.0181637137225774"/>
+         <mass value="1.15316"/>
+         <inertia ixx="0.0179449" iyy="0.0173612" izz="0.00102628" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_2">
+         <origin xyz="-0.1264755368906631 2.191508172488795e-07 0.0018239161282576019" rpy="-0.016876931730668066 -1.556427013498308 -3.1247155382867926"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_2_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_1_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_1">
+      <parent link="follower_left_link_1"/>
+      <child link="follower_left_joint_1_jointbody"/>
+      <origin xyz="0.02 0.0 0.04625" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 1.0 0.0"/>
+      <limit lower="0.0" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_1_offset">
+      <parent link="follower_left_joint_1_jointbody"/>
+      <child link="follower_left_link_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_link_3">
+      <inertial>
+         <origin xyz="0.180836 -0.0009409 0.0555494" rpy="0.0870329768263991 -1.4671951050226073 3.035147859369381"/>
+         <mass value="0.686666"/>
+         <inertia ixx="0.00566898" iyy="0.00547578" izz="0.00059316" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_3">
+         <origin xyz="0.14339671821700287 -3.66948433949396e-08 0.050683068823265814" rpy="-0.0018745973969396257 -1.421071884641665 -3.139696846367266"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_3_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_2_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_2">
+      <parent link="follower_left_link_2"/>
+      <child link="follower_left_joint_2_jointbody"/>
+      <origin xyz="-0.264 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="0.0" upper="2.35619" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_2_offset">
+      <parent link="follower_left_joint_2_jointbody"/>
+      <child link="follower_left_link_3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_link_4">
+      <inertial>
+         <origin xyz="0.0579784 0.00027145 0.0588445" rpy="0.1289673545379658 0.6183200141018022 0.17494784248357584"/>
+         <mass value="0.457899"/>
+         <inertia ixx="0.000670827" iyy="0.000661455" izz="0.000288648" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_4">
+         <origin xyz="0.04504446375837256 0.000778484787512959 0.0495170598487726" rpy="0.03957367343348331 0.7303402923425608 0.003740128267306981"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_4_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_3_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_3">
+      <parent link="follower_left_link_3"/>
+      <child link="follower_left_joint_3_jointbody"/>
+      <origin xyz="0.245 0.0 0.06" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_3_offset">
+      <parent link="follower_left_joint_3_jointbody"/>
+      <child link="follower_left_link_4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_link_5">
+      <inertial>
+         <origin xyz="0.00412447 -1.138e-05 -0.0428318" rpy="1.5822765357314705 -0.0005066292740754097 1.574214475189914"/>
+         <mass value="0.366939"/>
+         <inertia ixx="0.000320622" iyy="0.00026751" izz="0.000189108" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_5">
+         <origin xyz="-0.002166311738232536 1.72947851272347e-07 -0.04290613650309884" rpy="0.3323689050615688 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_5_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_4_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_4">
+      <parent link="follower_left_link_4"/>
+      <child link="follower_left_joint_4_jointbody"/>
+      <origin xyz="0.06775 0.0 0.0455" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_4_offset">
+      <parent link="follower_left_joint_4_jointbody"/>
+      <child link="follower_left_link_5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_link_6">
+      <inertial>
+         <origin xyz="0.046841 0.00145133 0.00895674" rpy="-1.7585205182099808 -0.8203663074306741 -3.0359300223553163"/>
+         <mass value="0.671874"/>
+         <inertia ixx="0.00118316" iyy="0.00110863" izz="0.00078309" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_6">
+         <origin xyz="0.052095659370977966 0.00038230841514305723 -7.710943665764803e-08" rpy="1.5672926588739846 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_6_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="camera_mount_d405">
+         <origin xyz="0.04507515233803293 0.0050792950434895056 0.05131359763330634" rpy="2.170519076352845 0.39048365543589436 0.11692239285768746"/>
+         <geometry>
+            <mesh filename="meshes/converted_camera_mount_d405_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_joint_5_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_left_joint_5">
+      <parent link="follower_left_link_5"/>
+      <child link="follower_left_joint_5_jointbody"/>
+      <origin xyz="0.02895 0.0 -0.0455" rpy="0.0 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_left_joint_5_offset">
+      <parent link="follower_left_joint_5_jointbody"/>
+      <child link="follower_left_link_6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_carriage_right">
+      <inertial>
+         <origin xyz="0.00169015 0.00592793 0.00201817" rpy="-1.7434065649252553 -0.8589479055839652 -0.962945842905935"/>
+         <mass value="0.081271"/>
+         <inertia ixx="4.29565e-05" iyy="3.87081e-05" izz="2.21528e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="carriage_right">
+         <origin xyz="-0.009934658918998796 0.01153310568845968 0.006782882933945681" rpy="1.689572328758592 -0.24114734648307135 0.12576703029530278"/>
+         <geometry>
+            <mesh filename="meshes/converted_carriage_right_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="gripper_right">
+         <origin xyz="0.021508039898245148 0.008709067202951799 -0.002300040715634085" rpy="1.5996704324018844 -0.019802025295978076 1.9574528262788105"/>
+         <geometry>
+            <mesh filename="meshes/converted_gripper_right_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_right_carriage_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="follower_left_right_carriage_joint">
+      <parent link="follower_left_link_6"/>
+      <child link="follower_left_right_carriage_joint_jointbody"/>
+      <origin xyz="0.0865 -0.023 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="follower_left_right_carriage_joint_offset">
+      <parent link="follower_left_right_carriage_joint_jointbody"/>
+      <child link="follower_left_carriage_right"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_left_carriage_left">
+      <inertial>
+         <origin xyz="0.00169017 -0.00592796 -0.00365701" rpy="-1.3813947295315696 -1.1259123004277551 -2.0759001883972914"/>
+         <mass value="0.081271"/>
+         <inertia ixx="4.21112e-05" iyy="3.61943e-05" izz="2.40003e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="carriage_left">
+         <origin xyz="-0.009934658918998746 -0.011533105688459576 -0.006782882933945627" rpy="1.68957232875859 0.24114734648307157 -0.12576703029530467"/>
+         <geometry>
+            <mesh filename="meshes/converted_carriage_left_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="gripper_left">
+         <origin xyz="0.021507936438004683 -0.008709136528334946 -0.002300103702807539" rpy="1.59970723686982 0.01981074131663285 1.1841417830615224"/>
+         <geometry>
+            <mesh filename="meshes/converted_gripper_left_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_left_left_carriage_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="follower_left_left_carriage_joint">
+      <parent link="follower_left_link_6"/>
+      <child link="follower_left_left_carriage_joint_jointbody"/>
+      <origin xyz="0.0865 0.023 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="follower_left_left_carriage_joint_offset">
+      <parent link="follower_left_left_carriage_joint_jointbody"/>
+      <child link="follower_left_carriage_left"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_base_link">
+      <inertial>
+         <origin xyz="-0.00014175 -5.228e-05 0.03175177" rpy="-1.721371549848886 -1.548158297680064 0.1466629698349453"/>
+         <mass value="0.45969858"/>
+         <inertia ixx="0.000213926" iyy="0.000416701" izz="0.000448963" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_link">
+         <origin xyz="0.0010981177329573565 5.5379658459512283e-14 0.027120937276362535" rpy="-0.3445888307125494 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_base_link_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="armor_kit_link2follower_right_base_link_fixed">
+      <parent link="armor_kit_link"/>
+      <child link="follower_right_base_link"/>
+      <origin xyz="-0.1725 -0.0175 0.993" rpy="0.0 0.0 -1.5707963267948957"/>
+   </joint>
+   <link name="follower_right_link_1">
+      <inertial>
+         <origin xyz="-0.00011075 0.00171176 0.0204459" rpy="-1.594672255731402 -0.9064747536902737 3.1395089292545397"/>
+         <mass value="0.152704"/>
+         <inertia ixx="0.000203432" iyy="0.000173907" izz="8.3521e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_1">
+         <origin xyz="0.004177459697505119 0.0010394651203662053 0.024668777663402044" rpy="1.576169235560362 0.7774652998389691 -0.0036088379142910076"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_1_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_0_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_0">
+      <parent link="follower_right_base_link"/>
+      <child link="follower_right_joint_0_jointbody"/>
+      <origin xyz="0.0 0.0 0.05725" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.05433" upper="3.05433" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_0_offset">
+      <parent link="follower_right_joint_0_jointbody"/>
+      <child link="follower_right_link_1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_link_2">
+      <inertial>
+         <origin xyz="-0.131215 -0.00292583 0.00021345" rpy="-1.1232308506152693 -1.5671388990308042 -2.0181637137225774"/>
+         <mass value="1.15316"/>
+         <inertia ixx="0.0179449" iyy="0.0173612" izz="0.00102628" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_2">
+         <origin xyz="-0.1264755368906631 2.191508172488795e-07 0.0018239161282576019" rpy="-0.016876931730668066 -1.556427013498308 -3.1247155382867926"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_2_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_1_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_1">
+      <parent link="follower_right_link_1"/>
+      <child link="follower_right_joint_1_jointbody"/>
+      <origin xyz="0.02 0.0 0.04625" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 1.0 0.0"/>
+      <limit lower="0.0" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_1_offset">
+      <parent link="follower_right_joint_1_jointbody"/>
+      <child link="follower_right_link_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_link_3">
+      <inertial>
+         <origin xyz="0.180836 -0.0009409 0.0555494" rpy="0.0870329768263991 -1.4671951050226073 3.035147859369381"/>
+         <mass value="0.686666"/>
+         <inertia ixx="0.00566898" iyy="0.00547578" izz="0.00059316" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_3">
+         <origin xyz="0.14339671821700287 -3.66948433949396e-08 0.050683068823265814" rpy="-0.0018745973969396257 -1.421071884641665 -3.139696846367266"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_3_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_2_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_2">
+      <parent link="follower_right_link_2"/>
+      <child link="follower_right_joint_2_jointbody"/>
+      <origin xyz="-0.264 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="0.0" upper="2.35619" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_2_offset">
+      <parent link="follower_right_joint_2_jointbody"/>
+      <child link="follower_right_link_3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_link_4">
+      <inertial>
+         <origin xyz="0.0579784 0.00027145 0.0588445" rpy="0.1289673545379658 0.6183200141018022 0.17494784248357584"/>
+         <mass value="0.457899"/>
+         <inertia ixx="0.000670827" iyy="0.000661455" izz="0.000288648" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_4">
+         <origin xyz="0.04504446375837256 0.000778484787512959 0.0495170598487726" rpy="0.03957367343348331 0.7303402923425608 0.003740128267306981"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_4_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_3_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_3">
+      <parent link="follower_right_link_3"/>
+      <child link="follower_right_joint_3_jointbody"/>
+      <origin xyz="0.245 0.0 0.06" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_3_offset">
+      <parent link="follower_right_joint_3_jointbody"/>
+      <child link="follower_right_link_4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_link_5">
+      <inertial>
+         <origin xyz="0.00412447 -1.138e-05 -0.0428318" rpy="1.5822765357314705 -0.0005066292740754097 1.574214475189914"/>
+         <mass value="0.366939"/>
+         <inertia ixx="0.000320622" iyy="0.00026751" izz="0.000189108" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_5">
+         <origin xyz="-0.002166311738232536 1.72947851272347e-07 -0.04290613650309884" rpy="0.3323689050615688 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_5_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_4_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_4">
+      <parent link="follower_right_link_4"/>
+      <child link="follower_right_joint_4_jointbody"/>
+      <origin xyz="0.06775 0.0 0.0455" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_4_offset">
+      <parent link="follower_right_joint_4_jointbody"/>
+      <child link="follower_right_link_5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_link_6">
+      <inertial>
+         <origin xyz="0.046841 0.00145133 0.00895674" rpy="-1.7585205182099808 -0.8203663074306741 -3.0359300223553163"/>
+         <mass value="0.671874"/>
+         <inertia ixx="0.00118316" iyy="0.00110863" izz="0.00078309" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_6">
+         <origin xyz="0.052095659370977966 0.00038230841514305723 -7.710943665764803e-08" rpy="1.5672926588739846 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_link_6_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="camera_mount_d405">
+         <origin xyz="0.04507515233803293 0.0050792950434895056 0.05131359763330634" rpy="2.170519076352845 0.39048365543589436 0.11692239285768746"/>
+         <geometry>
+            <mesh filename="meshes/converted_camera_mount_d405_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_joint_5_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="follower_right_joint_5">
+      <parent link="follower_right_link_5"/>
+      <child link="follower_right_joint_5_jointbody"/>
+      <origin xyz="0.02895 0.0 -0.0455" rpy="0.0 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="follower_right_joint_5_offset">
+      <parent link="follower_right_joint_5_jointbody"/>
+      <child link="follower_right_link_6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_carriage_right">
+      <inertial>
+         <origin xyz="0.00169015 0.00592793 0.00201817" rpy="-1.7434065649252553 -0.8589479055839652 -0.962945842905935"/>
+         <mass value="0.081271"/>
+         <inertia ixx="4.29565e-05" iyy="3.87081e-05" izz="2.21528e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="carriage_right">
+         <origin xyz="-0.009934658918998796 0.01153310568845968 0.006782882933945681" rpy="1.689572328758592 -0.24114734648307135 0.12576703029530278"/>
+         <geometry>
+            <mesh filename="meshes/converted_carriage_right_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="gripper_right">
+         <origin xyz="0.021508039898245148 0.008709067202951799 -0.002300040715634085" rpy="1.5996704324018844 -0.019802025295978076 1.9574528262788105"/>
+         <geometry>
+            <mesh filename="meshes/converted_gripper_right_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_right_carriage_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="follower_right_right_carriage_joint">
+      <parent link="follower_right_link_6"/>
+      <child link="follower_right_right_carriage_joint_jointbody"/>
+      <origin xyz="0.0865 -0.023 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="follower_right_right_carriage_joint_offset">
+      <parent link="follower_right_right_carriage_joint_jointbody"/>
+      <child link="follower_right_carriage_right"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="follower_right_carriage_left">
+      <inertial>
+         <origin xyz="0.00169017 -0.00592796 -0.00365701" rpy="-1.3813947295315696 -1.1259123004277551 -2.0759001883972914"/>
+         <mass value="0.081271"/>
+         <inertia ixx="4.21112e-05" iyy="3.61943e-05" izz="2.40003e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="carriage_left">
+         <origin xyz="-0.009934658918998746 -0.011533105688459576 -0.006782882933945627" rpy="1.68957232875859 0.24114734648307157 -0.12576703029530467"/>
+         <geometry>
+            <mesh filename="meshes/converted_carriage_left_808080ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="gripper_left">
+         <origin xyz="0.021507936438004683 -0.008709136528334946 -0.002300103702807539" rpy="1.59970723686982 0.01981074131663285 1.1841417830615224"/>
+         <geometry>
+            <mesh filename="meshes/converted_gripper_left_808080ff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="follower_right_left_carriage_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="follower_right_left_carriage_joint">
+      <parent link="follower_right_link_6"/>
+      <child link="follower_right_left_carriage_joint_jointbody"/>
+      <origin xyz="0.0865 0.023 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="follower_right_left_carriage_joint_offset">
+      <parent link="follower_right_left_carriage_joint_jointbody"/>
+      <child link="follower_right_carriage_left"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Downdraft_Assy">
+      <inertial>
+         <origin xyz="0.573225776918543 0.6146207355262081 -0.36243549643241685" rpy="0.11622622362826107 -1.4122494539459707 1.5900751633317798"/>
+         <mass value="2298.570498566325"/>
+         <inertia ixx="625.067722954533" iyy="430.62004094507154" izz="398.67505643826956" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Downdraft_Assy_0">
+         <origin xyz="0.1820420297880331 1.0702004341074927 -0.45305984675116495" rpy="1.570542861734339 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_0_cb9a3bff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_1">
+         <origin xyz="0.18214523065869498 1.0679753169398563 -0.45194511317651365" rpy="0.10781395169507335 -1.5606358541563583 1.4628974985064835"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_1_050505ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_2">
+         <origin xyz="0.182047316645025 1.0077564548483549 -0.4301202471140429" rpy="1.5707963267948966 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_2_f5f5f6ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_3">
+         <origin xyz="0.18204731291462534 1.0384130406924104 -0.4301202482044522" rpy="1.5707963267948966 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_3_a0a0a0ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_4">
+         <origin xyz="0.18204731298643467 1.0233000488281252 -0.4301202483116556" rpy="1.5707963267948966 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_4_191919ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_5">
+         <origin xyz="0.18204731250777892 0.9394987083076185 -0.28012025443086136" rpy="0.0 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_5_f4f4f4ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_6">
+         <origin xyz="0.1820504985368515 1.0210747417881796 -0.3034229473191147" rpy="0.3428686264556654 -0.00016760337209187348 0.000511908374016462"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_6_050505ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_7">
+         <origin xyz="1.0161257927687877 0.9272946577277882 -0.31196087685354534" rpy="-0.4612999602499668 -0.09816816154614227 1.7148939050000445"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_7_ffffffff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_8">
+         <origin xyz="0.6762170072938416 0.9768715545380607 -0.34034223656663365" rpy="1.8040355230676726 0.0004906206625130416 1.5720047621975102"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_8_8358c5ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_9">
+         <origin xyz="0.3345702655388274 0.9851648422163632 -0.41017194497482584" rpy="-0.010312358480361272 -1.3563926444851353 2.6345875833645658"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_9_bebcbaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_10">
+         <origin xyz="0.5377824091788489 0.9889736030322595 -0.38079567681425447" rpy="1.6890539250377887 0.007951357274936344 1.5738392748787178"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_10_739440ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_11">
+         <origin xyz="0.8642761114232508 0.9544322448868062 -0.21391237041671146" rpy="1.047603646198169 0.09154326774106925 1.5193831599833854"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_11_bfbfbfff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_12">
+         <origin xyz="0.46239752194572914 0.9486233168858478 -0.37541099577769943" rpy="3.141592653589793 -1.5699832655393982 -1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_12_c0c0c0ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_13">
+         <origin xyz="0.46239741807163925 0.9811967185518 -0.37541513174044366" rpy="0.0 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_13_404040ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_14">
+         <origin xyz="0.5636058554607688 0.9385189791730372 -0.3754461074244386" rpy="1.571297219278328 -0.00041702630672779684 1.5667727158905136"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_14_52692bff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_15">
+         <origin xyz="0.5757018645061291 1.1118013378196154 -0.43963979788007673" rpy="1.5714369651900317 -0.545951437448776 1.5705839384985745"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_15_3087e3ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_16">
+         <origin xyz="0.5750001198343119 0.3462999973914377 -0.02292848149110908" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_16_10ab4a85.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_17">
+         <origin xyz="0.57504419329626 0.01988127281642295 -0.3494043599510419" rpy="1.5707923067695573 -0.0013285429402078996 1.5708083428343143"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_17_bebcbaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_18">
+         <origin xyz="0.5750003094715577 0.4522449429632737 -0.01999999952485543" rpy="3.141592653589793 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_18_afafafff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_19">
+         <origin xyz="0.5706448365028455 0.4561114903803843 -0.3566711106889992" rpy="1.5522613520785795 0.28354177159165705 1.5661148656772441"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_19_ecf1efa8.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_20">
+         <origin xyz="0.5031305460356196 -0.033848902313241405 -0.34641170262473137" rpy="1.572133836955597 -3.6488199961492995e-06 1.5711047757237726"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_20_afafafff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_21">
+         <origin xyz="0.5342546328611975 -0.02418019484123508 -0.3465897020135607" rpy="1.571544281528218 1.588540555763629e-06 1.5707842712181992"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_21_afafafff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_22">
+         <origin xyz="0.5324684973615986 -0.06629993125849355 -0.34690786610751595" rpy="1.5704191962899618 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_22_0a0a0aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_23">
+         <origin xyz="0.543792671627624 -0.03224044504352014 -0.347372629767858" rpy="1.5695856405279975 0.00019685618986553521 1.5723330390461372"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_23_f4f4f4ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_24">
+         <origin xyz="0.5832136435897411 0.4354453025762129 -0.3467999770062226" rpy="3.077302034282915 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_24_fefeffff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_0">
+         <origin xyz="0.25946470247956793 0.3257480638918092 -0.6940478813000104" rpy="0.9478216219731621 -1.5702191464795212 0.6316798707215026"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_0_50f07eff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_1">
+         <origin xyz="0.7405922905362798 0.9112567899723173 -0.019358148821716863" rpy="-1.6263640085610769 -1.4782509826032741 -1.5414974959959462"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_1_ee13afff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_2">
+         <origin xyz="0.7383546624207706 0.02220471164359248 -0.176403195794204" rpy="0.012021821649663034 0.012050408894339615 1.571126293656958"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_2_bea3ccff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_3">
+         <origin xyz="1.1372988153317392 0.36302946993592095 -0.5651069550402186" rpy="1.5692651788276801 0.06961641523025297 -0.00016707013749139854"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_3_4bde45ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_4">
+         <origin xyz="0.3421617326666189 0.02564195684024979 -0.1706324507955439" rpy="1.5834210716573418 0.030072687376310192 1.5720690176480687"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_4_aca653ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_5">
+         <origin xyz="0.32499957249945544 0.3226626661162582 -0.019189947858780355" rpy="1.5838394701629093 -1.5030663013824601 -0.001671245995384374"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_5_d99604ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_6">
+         <origin xyz="1.1287769584251965 0.027192846418702298 -0.5377511603162544" rpy="0.004219190282330587 0.009422002377989402 -0.23721231182353542"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_6_73a3e7ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_7">
+         <origin xyz="1.1472272598832463 0.6142034492257733 -0.19050355365337793" rpy="1.522017081414981 -0.0007642523961206571 -0.0005256095781880354"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_7_03d8d9ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_8">
+         <origin xyz="0.03477122689406778 0.4606531169310035 -0.018924480096535336" rpy="1.5724667922886035 0.6556256793476383 -0.003640578803504213"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_8_eb3578ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_9">
+         <origin xyz="1.147933403925992 1.0459056085175216 -0.45598731834116674" rpy="1.5705785089265965 -2.220446049250313e-16 0.0023708648407541055"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_9_463f71ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_10">
+         <origin xyz="0.9943435823890657 0.5732137084162946 -8.526779007100937e-06" rpy="1.3640477486984364 -1.5703204762129876 0.20757620346177819"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_10_48db73ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_11">
+         <origin xyz="0.6031027890956996 0.024021494100936316 -0.5325735384381854" rpy="1.564125053407512 -0.025754855112556818 1.5691538348181355"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_11_0df8c2ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_12">
+         <origin xyz="0.5597281681987738 1.3959482995507893 -0.6216972845793105" rpy="1.5832441061200515 0.01790993299065713 1.5743246901609984"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_12_afc635ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_13">
+         <origin xyz="-0.0006982912645123649 0.3231800803042824 -0.17762308468420096" rpy="1.5711829005151199 0.003737232207408292 1.6024548147308693e-05"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_13_b33eeaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_14">
+         <origin xyz="0.02799860053007374 0.8832616816785146 -0.2241979253985133" rpy="4.918077178398331e-05 3.627262189276337e-06 -0.02491249529823399"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_14_86b39cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_15">
+         <origin xyz="0.04231731218262295 9.077637216299548e-05 -0.05781836716510836" rpy="2.9703162466422515 -1.2229080172995745 -1.8601587888879796"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_15_7027eaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_16">
+         <origin xyz="0.029088912921123682 0.36287128721881146 -0.6628658985064184" rpy="1.5706475878393757 -0.7694026815492244 0.00028637490748129046"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_16_0c2978ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_17">
+         <origin xyz="0.12317585351437636 0.9843417318393477 -0.22232764971316646" rpy="0.012955498722469483 -0.01053658859760187 1.3541171336337712"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_17_1d8560ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_18">
+         <origin xyz="-5.678535116836683e-05 0.9082844041849539 -0.19911322364889128" rpy="1.375718679669526 0.0013308531771041299 -0.0007812166266331078"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_18_a7f566ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_19">
+         <origin xyz="1.0296812421539898 -0.04631513531251637 -0.618853299606943" rpy="-1.392929533256652 -1.5659938609387063 -1.8425189231638441"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_19_410786ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_20">
+         <origin xyz="-0.0012941199725601314 0.3631955162672514 -0.5265833918904904" rpy="1.570562737473395 -0.00017542917058865903 1.733787011692911e-05"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_20_d821afff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_21">
+         <origin xyz="0.6110739535234158 0.9095204753534316 -0.22667622006423216" rpy="1.567228789429087 -0.021061749378353367 1.575744514923564"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_21_c434e5ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_22">
+         <origin xyz="0.0912560969729633 0.884831237525327 -0.6505098495231944" rpy="1.712821518785339 0.7698242583495847 1.7108796357647775"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_22_a1ba77ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_23">
+         <origin xyz="0.27252551335996306 1.0288507302363117 -0.6921205070135636" rpy="1.3374614637350057 -1.5639587745819703 0.20137022050021314"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_23_cc72a9ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_24">
+         <origin xyz="1.1064711256815885 0.019289763885241874 -0.16956529806041873" rpy="-0.0095466623069929 -0.0057850076069974055 -0.1359499354556024"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_24_962b0fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_25">
+         <origin xyz="0.8107369141725027 0.34119073523467636 -0.006829049707605044" rpy="-1.5999255174729927 -1.546036868813234 -3.117170962993707"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_25_813df7ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_26">
+         <origin xyz="0.04134320758468155 -0.0013926538498311106 -0.627866388213232" rpy="-0.1210450019710303 -1.398791676968954 1.2102565111758172"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_26_0202e4ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_27">
+         <origin xyz="1.1467318180266788 1.0369702159806728 -0.621334844095149" rpy="1.5851947278802696 0.012279649100868983 0.005176123254640119"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_27_7cc98cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_28">
+         <origin xyz="1.1087671457365509 0.549642849953066 -0.020131912659154854" rpy="1.5691995387962134 -0.2809801853433078 0.005116375898651437"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_28_d9de05ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_29">
+         <origin xyz="0.5648650563814235 1.3933884730864678 -0.46768985755757453" rpy="1.5625303078567798 0.0674656886883227 1.5732022472287541"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_29_2e47e7ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_30">
+         <origin xyz="1.1109998857291854 0.891152699221097 -0.47969433333745465" rpy="1.4151122590949403 -0.9200267243147269 0.4610626939699911"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_30_945b4eff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_31">
+         <origin xyz="0.22681917408462124 1.0639888299754006 -0.41878999673640505" rpy="-1.4709144037144704 -1.4695206287771871 3.0428959639861946"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_31_cb2cc5ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_32">
+         <origin xyz="1.0028451099510554 -0.011191277763779928 -0.07306532734248526" rpy="-2.0202033940857502 -1.5244435427198602 -1.5860735606332768"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_32_6303ccff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_33">
+         <origin xyz="0.3267595834578994 1.2758702666245736 -0.5184582471295686" rpy="-1.5803889847737302 -1.570604204951396 -1.5611731067897168"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_33_71068fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_34">
+         <origin xyz="0.27486643450433934 0.9304361217946724 -0.0027122548712584103" rpy="-0.8087187010876611 -1.5622453794440032 -2.3392279646282144"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_34_07f547ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_35">
+         <origin xyz="0.0882225702352016 1.1015626904016427 -0.2246772569459091" rpy="0.4454108288501474 0.034556981544223264 -0.01565422577486783"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_35_065a74ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_36">
+         <origin xyz="0.8572674896435242 0.965549235771829 -0.2677672155882425" rpy="-0.0030380279394817047 0.0009062265264057068 0.01436573998178904"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_36_50772eff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_37">
+         <origin xyz="0.050869758204857084 0.016053058661066065 -0.12060039970002737" rpy="1.465343247615948 -1.544536903250479 1.4479302229913875"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_37_5b7e9fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_38">
+         <origin xyz="0.9941361903496263 0.020024175455397135 -0.24831607719447693" rpy="0.00043382890783050243 -0.000194115656817484 1.5705233425878364"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_38_36e91aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_39">
+         <origin xyz="0.5878437556197038 0.8849666836842606 -0.6590677440391197" rpy="-1.5682634996633997 -1.089974815147078 -1.5711155289058967"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_39_753311ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_40">
+         <origin xyz="0.019522835207676607 0.7971018196922772 -0.6459950352546076" rpy="1.595338600234531 -0.5307359783275754 -0.029232708900291615"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_40_434389ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_41">
+         <origin xyz="0.8319850769042969 1.2058253017163356 -0.51867728529255" rpy="1.5707963267948966 -1.569724033347294 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_41_bcea03ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_42">
+         <origin xyz="0.5583120626332058 0.9613489736430217 -0.33031554721563516" rpy="1.5752332405600773 -1.2329668517959687 1.589040814349121"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_42_39afbcff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_43">
+         <origin xyz="0.050697806847358716 0.025699201750849998 -0.3529269499949857" rpy="5.428581607092031e-05 0.0021729596387154437 1.4251889813613192"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_43_447e63ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_44">
+         <origin xyz="0.3196581606798531 0.8824800494813482 -0.04102396080388011" rpy="1.5691147973728152 -0.9796601174630598 1.572880611000763"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_44_4563caff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_45">
+         <origin xyz="1.1015146485486402 1.0251234200041117 -0.6900566640530424" rpy="-1.3277725622443284 -1.5558916145770643 2.8848060750910034"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_45_7a5486ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_46">
+         <origin xyz="0.9942899782351212 0.04347832930812197 -0.009958402577660886" rpy="-1.5759072776875813 -1.4454711677480698 -1.5653230585869353"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_46_ce8971ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_47">
+         <origin xyz="0.0020619399319251126 1.0027425900928868 -0.6472522936189149" rpy="1.5716528717494773 -0.10767891950868114 0.0008453435561314171"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_47_e3d7a0ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_48">
+         <origin xyz="0.81791359379526 1.0209560853915518 -0.6942850519806635" rpy="0.0 -1.5706137183645064 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_48_8dc8aeff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_49">
+         <origin xyz="0.163109438641572 0.9077328009211352 -0.2172977095316929" rpy="0.04892528013799058 0.032400872857129004 1.6431676135094069"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_49_486039ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_50">
+         <origin xyz="0.7398038767818579 0.319959117506987 -0.6941528414332792" rpy="0.6068568228889911 -1.57076520689791 2.5490176814126198"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_50_123138ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_51">
+         <origin xyz="0.9973560427735269 0.008238135318786557 -0.11975787823903354" rpy="1.4407665305621844 -1.5317495552318219 1.622189459652517"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_51_d388baff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_52">
+         <origin xyz="0.7404730570121754 0.1067410395311595 -0.6919380288107656" rpy="1.5509204034386435 -1.552910060399196 1.5556596087238606"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_52_8a7edaff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_53">
+         <origin xyz="0.8341764765232292 0.9461146629943953 -0.5200224751629988" rpy="-1.6940556943286902 -1.556105842754895 -1.450935189090954"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_53_2b7092ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_54">
+         <origin xyz="0.0029989023062886666 1.0480001107894152 -0.4558035102879677" rpy="1.5703979506696344 -0.00012090680767240514 -0.0037851280813743227"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_54_28f647ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_55">
+         <origin xyz="0.37330843880493947 1.0187830278705328 -0.5195632971041875" rpy="-1.5707963267948966 -1.5665696548482653 -1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_55_8d45b7ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_56">
+         <origin xyz="0.999495274603305 0.9065701631309243 -0.2503321873866508" rpy="-0.0374910322459856 -0.007447485444506352 1.5948841559060645"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_56_3d3ea3ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_57">
+         <origin xyz="0.7233178862852723 0.14321591479801063 -0.03809706112667476" rpy="-0.6472290988362353 -1.5558929297850892 -2.4700868724874745"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_57_b865abff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_58">
+         <origin xyz="0.16280656215344838 1.0604134320244594 -0.107439467896631" rpy="1.34105892528821 -1.5519581955643649 1.8628365936336282"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_58_ec71e6ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_59">
+         <origin xyz="1.1041200252526697 0.8860552021651988 -0.591156541510976" rpy="-0.10587939334108476 0.16894880140169333 0.9078409846053926"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_59_0d8b5cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_60">
+         <origin xyz="0.040375209518316434 0.8876066444127936 -0.576676617705852" rpy="1.2272558560843685 -0.003565854152783876 2.164691882260229"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_60_420492ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_61">
+         <origin xyz="0.45577984634124374 0.6414757674548772 -0.03129665620648533" rpy="-1.8644004972277344 -1.5253055115223022 -1.3043691451670307"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_61_a2baf5ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_62">
+         <origin xyz="0.9944931113507632 0.8887911760517876 -0.03868044934918735" rpy="1.5741018108730123 -0.8694505703100153 1.5679107127360756"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_62_99ad3bff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_63">
+         <origin xyz="0.6860980078993116 0.5214492975488313 -0.694152655558755" rpy="-3.3282265832212943e-12 -1.5707564627546182 3.1412841174556743"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_63_212704ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_64">
+         <origin xyz="1.0880898464653461 0.9276911574035869 -0.40661959310979195" rpy="0.14438723911075196 0.22020366291509763 0.20877910332503663"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_64_924a94ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_65">
+         <origin xyz="0.4907838196338766 0.7885854278487449 3.59182977919477e-05" rpy="2.038375367026214 -1.5684442142700343 1.4303108798020396"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_65_963013ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_66">
+         <origin xyz="2.715611324338917e-05 0.870542476320603 -0.5772691275035287" rpy="1.5726617218924708 0.004201756810025881 -0.0023136103445526857"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_66_9c5e6aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_67">
+         <origin xyz="0.7672824625532437 0.769882037180831 -0.004205888203337769" rpy="3.135175817100377 -1.549485936221956 0.006788585687951931"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_67_77196fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_68">
+         <origin xyz="1.109517324514708 0.8901200387396275 -0.1877754032360128" rpy="0.018404153978380244 -0.006467658583790614 0.3817043780946752"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_68_0de867ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_69">
+         <origin xyz="0.3083100686032926 0.7064566206847094 -0.029879315924885363" rpy="1.607113787777632 -1.5339696024339255 -0.031234879439291707"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_69_a4841bff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_70">
+         <origin xyz="1.0041140917010078 0.935037359518928 -0.10298641235913696" rpy="-1.4399329773534546 -1.4990527791142 -1.4827121548547462"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_70_c90215ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_71">
+         <origin xyz="0.2420237869703504 0.9849968326983822 -0.22349225250545798" rpy="-0.017938841000442185 -0.013725473713775083 1.7964511822836653"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_71_269858ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_72">
+         <origin xyz="1.094913239974726 0.5367202231936313 -0.69262708592895" rpy="1.5683707905822155 0.06207194245528558 0.002105001984807786"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_72_a5d873ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_73">
+         <origin xyz="0.8434263239007199 0.5334070047207955 -0.03476952369174069" rpy="-1.5621086732330536 -1.5159153459601693 3.1358016390896104"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_73_3fe566ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_74">
+         <origin xyz="0.03864096187249487 0.8810882165856445 -0.04753679258162884" rpy="-1.2839724608443461 -0.8797694467633986 2.7862132313705636"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_74_1beed9ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_75">
+         <origin xyz="1.0410177875604627 0.3173355504809278 -0.6930640548619721" rpy="-1.4052219958364565 -1.5550550387879416 -2.9672248618406063"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_75_f908c4ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_76">
+         <origin xyz="0.895376508195124 0.9054043059158527 -0.4328003295684458" rpy="1.5745881634322396 0.0020980887191297537 1.5804347337083464"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_76_370d32ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_77">
+         <origin xyz="0.21976290569197462 0.9097970353777413 -0.429714742514405" rpy="1.6098950677660457 0.007110465449244208 1.5586432748235153"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_77_c26eceff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_78">
+         <origin xyz="0.11414389931739762 1.0089834810462603 -0.5112532880286659" rpy="-0.22052975463614666 -1.5268732708927957 1.789009512608431"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_78_ffe13fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_79">
+         <origin xyz="0.6708940081707355 0.6789102426566609 -0.005759830347320983" rpy="-1.7515702712622003 -1.5441575935153682 -1.40812455164232"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_79_40ba6fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_80">
+         <origin xyz="0.5630270256692104 0.9420236909197185 -0.425263527969629" rpy="1.5711986586532112 0.5639100564338726 1.5722075896335823"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_80_83bc61ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_81">
+         <origin xyz="1.107851443013161 1.1149631114808554 -0.5220731046617936" rpy="2.242911589825318 -1.5586411465644203 -0.6725915082048226"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_81_854016ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_82">
+         <origin xyz="0.8024456987284982 0.6494694466602692 -0.6939893492098425" rpy="1.5701650247712375 0.024438974933232327 1.57203392125662"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_82_6c5531ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_83">
+         <origin xyz="1.0361325238318504 0.08741435469010705 -0.6914541609481083" rpy="-0.6576118245999393 -1.5519391235713869 2.005600300447849"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_83_37c04cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_84">
+         <origin xyz="0.0035242636392093588 1.2283030603901457 -0.617504853343249" rpy="1.5716042076211 -0.044432217588430856 -0.0016123378175940672"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_84_aa7318ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_85">
+         <origin xyz="0.2705476286954188 1.1009272936927192 -0.21739155173782262" rpy="0.42073826617940535 -0.11405556351520851 0.11075897717542779"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_85_26b78fff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_86">
+         <origin xyz="0.6870280714084824 0.4802730574906156 -0.036671468814890626" rpy="-1.9419623028056887 -1.5572479759183127 -2.799898050627775"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_86_333255ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_87">
+         <origin xyz="1.096886063197907 0.881388101647887 -0.6556940486241429" rpy="-0.9275472462502465 -1.5341328272970234 -2.446230423339066"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_87_2c3da9ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_88">
+         <origin xyz="0.039842251949369634 1.1465033775190867 -0.5197383899815761" rpy="-1.5808876851132112 -1.5176570535165983 -3.130822911111358"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_88_3bfa3aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_89">
+         <origin xyz="0.25762737055589535 0.7071155534689274 -0.0013764575407739855" rpy="-3.0464613721845293 -1.5658127543943345 -0.10926216591711047"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_89_bd3869ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_90">
+         <origin xyz="0.03943512107912326 0.8920876718704939 -0.4591386625378534" rpy="0.0497941919668749 0.012075626412947349 -0.3089429998650883"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_90_abf8cfff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_91">
+         <origin xyz="0.11720560404087683 1.063624275335691 -0.41820347635278016" rpy="1.5671505727200756 -0.3325187142970276 0.002539036819208529"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_91_ac5707ff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Downdraft_Assy_collision_92">
+         <origin xyz="1.121456062034136 0.7479696127439268 -0.6583957700236466" rpy="1.573830736712936 0.6725258502963989 0.0021180387111791044"/>
+         <geometry>
+            <mesh filename="meshes/converted_Downdraft_Assy_collision_92_7b914aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="armor_kit_link2Downdraft_Assy_fixed">
+      <parent link="armor_kit_link"/>
+      <child link="Downdraft_Assy"/>
+      <origin xyz="0.577 -0.18 0.0" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+   </joint>
+</robot>

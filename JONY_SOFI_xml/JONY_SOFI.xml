@@ -1,0 +1,102 @@
+<mujoco model="JONY_SOFI">
+    
+    <include file="wxai_follower_left.xml"/>
+    <include file="wxai_follower_right.xml"/>
+    <compiler angle="radian" meshdir="meshes" texturedir="" autolimits="true" eulerseq="XYZ"/>
+    <asset>
+        <mesh name="Table_Assy_Side_Plates_Right" file="Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Front_Weld_Plate" file="Table_Assy_Front_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Top_Weld_Plate" file="Table_Assy_Top_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Top_Panel" file="Table_Assy_Top_Panel.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Rear_Panel" file="Table_Assy_Rear_Panel.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Back_Plate_Exhaust" file="Table_Assy_Back_Plate_Exhaust.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Side_Plates_Left" file="Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_bottom_box" file="Table_Assy_bottom_box.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Chute_01" file="Table_Assy_Chute_01.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Chute_02" file="Table_Assy_Chute_02.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Chute_03" file="Table_Assy_Chute_03.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Vibration_Table_Plate" file="Table_Assy_Vibration_Table_Plate.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Vibration_Table_Top_Plate" file="Table_Assy_Vibration_Table_Top_Plate.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Vibration_Table_Cover" file="Table_Assy_Vibration_Table_Cover.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_Mail_Spreader_Housing" file="Table_Assy_Mail_Spreader_Housing.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_M0_Top_Plate" file="Table_Assy_M0_Top_Plate.stl" scale="0.001 0.001 0.001" />
+        <mesh name="Table_Assy_pedestal" file="Table_Assy_pedestal.stl" scale="0.001 0.001 0.001" />
+    </asset>
+    <worldbody>
+        <body name="box" pos="1.0 -0.4375 0.99">
+            <joint name="red_box_joint" type="free" frictionloss="0.01"/>
+            <inertial pos="0 0 0" mass="0.05" diaginertia="0.002 0.002 0.002"/>
+            <geom condim="4" solimp="2 1 0.01" solref="0.01 1" friction="5.0 4 0.01" pos="0 0 0" size="0.0125 0.0125 0.0125" type="box" name="red_box" rgba="1 0 0 1"/>
+        </body>
+        <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1" />
+        <geom pos="0 0 0" size="1 1 1" type="plane" rgba="1 0.83 0.61 0.5" />
+        <body name="Table_Assy_bottom_box" pos="0.5755000000000605 0.3473000000001488 0.8999990000000722" euler="1.5707963267948961 2.595146320061305e-14 1.5707963267948952">
+            <geom name="Table_Assy_bottom_box_geom" type="mesh" mesh="Table_Assy_bottom_box" pos="0 0 0" euler="0 0 0" />
+            <inertial mass="6094.645799999998" pos="-0.6953000000001242 -0.41499900000008083 0.0034999999999523633" fullinertia="1149.5517753099984 917.709417529398 723.8996810894064 -8.04561847010338e-13 -1.011885098422144e-12 -1.1317166151346369e-13" />
+            <body name="Table_Assy_Top_Panel" pos="-1.2235545909788924e-13 0.0015009999999182355 -4.7535309022350705e-14" euler="-3.4512664603419266e-30 -6.399296456966153e-29 3.1415926535897922">
+                <geom name="Table_Assy_Top_Panel_geom" type="mesh" mesh="Table_Assy_Top_Panel" pos="0 0 0" euler="0 0 0" />
+                <inertial mass="8.638872154823748" pos="0.7190215741395722 -0.0692499999999999 -0.0012508128329555876" fullinertia="0.9774087280735442 1.3107669382962617 0.3333614497997832 3.4836552541797617e-16 0.0035484777358658157 4.0782870391147253e-16" />
+                <body name="Table_Assy_Side_Plates_Right" pos="1.6342482922482305e-15 1.0000000349918992e-06 1.1525000000000007" euler="-5.845945338624161e-14 1.2246467991473505e-16 0.0">
+                    <geom name="Table_Assy_Side_Plates_geom_Right" type="mesh" mesh="Table_Assy_Side_Plates_Right" pos="0 0 0" euler="0 0 0" />
+                    <inertial mass="3.3502178875867004" pos="0.6388405733819212 -0.28872222393639935 -0.5747500000000175" fullinertia="0.06425169768167785 0.1107467819837871 0.1749972233337589 -0.02615578684520504 -2.116247646434897e-15 -3.755624807565803e-15" />
+                    <body name="Table_Assy_Top_Weld_Plate" pos="-0.18630000000000024 -0.4999999999999672 -1.1525000000000316" euler="-5.860174503637766e-14 -1.224646799147352e-16 -3.141592653589793">
+                        <geom name="Table_Assy_Top_Weld_Plate_geom" type="mesh" mesh="Table_Assy_Top_Weld_Plate" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="4.4985571793770145" pos="-0.6945640289089043 0.07074999999999991 0.0015000000000001932" fullinertia="0.4991204499510249 0.5386936217373994 0.039574858745320185 4.424895953323975e-17 -1.0343462673326475e-16 -7.896400763377244e-17" />
+                        <body name="Table_Assy_Rear_Panel" pos="-0.015000500000039026 -0.2500000000000023 0.0015000000000000568" euler="3.1415926535897243 -3.2789020283935527e-15 -1.5707963267948966">
+                            <geom name="Table_Assy_Rear_Panel_geom" type="mesh" mesh="Table_Assy_Rear_Panel" pos="0 0 0" euler="0 0 0" />
+                            <inertial mass="7.256241530272004" pos="-0.06999285631849932 0.6944806568110542 -0.0015160732834409434" fullinertia="0.8782510928163023 1.0292714099498879 0.15124404386700974 -3.9879893758765364e-08 -2.5659790955783006e-05 8.97297484879914e-08" />
+                        </body>
+                    </body>
+                </body>
+                <body name="Table_Assy_Side_Plates_Left" pos="1.4210854715202005e-15 9.99999974169441e-07 2.842170943040401e-16" euler="4.66017437726886e-14 1.2246467991473505e-16 0.0">
+                    <geom name="Table_Assy_Side_Plates_geom_Left" type="mesh" mesh="Table_Assy_Side_Plates_Left" pos="0 0 0" euler="0 0 0" />
+                    <inertial mass="3.3502178875867004" pos="0.6388405733819212 -0.28872222393639935 -0.5747500000000176" fullinertia="0.06425169768167607 0.11074678198378576 0.17499722333375622 -0.026155786845205708 -1.6391508181145328e-15 -3.8831414227272846e-15" />
+                    <body name="Table_Assy_Front_Weld_Plate" pos="0.3487999999999999 -0.06370099999997379 2.913225216616411e-15" euler="-1.2449265467706876e-16 4.654001112840015e-14 1.5707963267948966">
+                        <geom name="Table_Assy_Front_Weld_Plate_geom" type="mesh" mesh="Table_Assy_Front_Weld_Plate" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="1.7596488000000674" pos="-0.07000000000000003 -0.6937499999999992 0.001499999999999872" fullinertia="0.1942657040915568 0.19664541060383095 0.0023803663805748165 -6.410164538511883e-17 9.713094994293897e-17 7.918656996933371e-17" />
+                    </body>
+                    <body name="Table_Assy_Back_Plate_Exhaust" pos="-0.34580000000006583 -0.24999999999989966 -0.0015000000000190284" euler="3.141592653589793 -4.598765316290481e-14 -1.5707963267948966">
+                        <geom name="Table_Assy_Back_Plate_Exhaust_geom" type="mesh" mesh="Table_Assy_Back_Plate_Exhaust" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="7.23847714972074" pos="0.07000000000005516 -0.6945212312801704 -0.0015000000000114381" fullinertia="0.871759217503979 1.022415953228518 0.1508804347156314 4.8717935802377165e-15 -2.1847117415221623e-13 2.7777826006639775e-16" />
+                    </body>
+                </body>
+                <body name="Table_Assy_Vibration_Table_Plate" pos="0.0671797496661021 1.2789769243681803e-15 -0.3934526870424287" euler="-3.141592653589793 1.570796326794895 0">
+                    <geom name="Table_Assy_Vibration_Table_Plate_geom" type="mesh" mesh="Table_Assy_Vibration_Table_Plate" pos="0 0 0" euler="0 0 0" />
+                    <inertial mass="0.5560141130264266" pos="-0.0017174812182112515 0.08403090037165499 -0.6945003713058735" fullinertia="0.00952429496345697 0.012758835493488638 0.003437097044428735 -7.897336272851581e-07 1.7628963325757758e-08 -1.3483128515555627e-09" />
+                </body>
+                <body name="Table_Assy_Mail_Spreader_Housing" pos="-0.02811509086870764 -0.014999999999999859 -0.011423451027591867" euler="-2.6806732293762493e-15 -7.097787474020157e-14 -3.1415926535897922">
+                    <geom name="Table_Assy_Mail_Spreader_Housing_geom" type="mesh" mesh="Table_Assy_Mail_Spreader_Housing" pos="0 0 0" euler="0 0 0" />
+                    <inertial mass="0.9679744461417281" pos="-0.6945473934186863 0.08053240969431215 -0.005649995800602575" fullinertia="0.01087212481692211 0.01296232842989235 0.0032294985478567026 6.586091191313066e-07 -4.483149662973115e-06 -9.84994673766279e-06" />
+                    <body name="Table_Assy_M0_Top_Plate" pos="8.526512829121202e-16 0.07449999999999989 7.105427357601002e-17" euler="3.141592653589793 3.4931790098873376e-30 -3.141592653589793">
+                        <geom name="Table_Assy_M0_Top_Plate_geom" type="mesh" mesh="Table_Assy_M0_Top_Plate" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="0.1465485002491547" pos="0.6910338198166185 0.07003468746243091 -0.006178289634212963" fullinertia="0.0013863056088074715 0.0017429196396757571 0.0003593992506941225 -1.8593354955243816e-06 -5.463950548351251e-05 7.606712999386254e-06" />
+                    </body>
+                </body>
+                <body name="Table_Assy_Chute_01" pos="0.08082437029044659 -1.4210854715202004e-16 0.400999999999965" euler="3.1415926535897922 -1.5707963267948946 0">
+                    <geom name="Table_Assy_Chute_01_geom" type="mesh" mesh="Table_Assy_Chute_01" pos="0 0 0" euler="0 0 0" />
+                    <inertial mass="0.40162002519738565" pos="0.05772619690397901 0.09360286537352258 0.6484517705304826" fullinertia="0.005361750452761825 0.007420254096579313 0.002829995039988406 -0.0004265341319401823 0.000835543411297146 0.0006737716338254691" />
+                    <body name="Table_Assy_Chute_02" pos="-0.11450000000000003 0.024999999999999148 -1.0658141036401502e-16" euler="-1.3355885970713252e-15 -1.5707963267948966 0">
+                        <geom name="Table_Assy_Chute_02_geom" type="mesh" mesh="Table_Assy_Chute_02" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="0.13589450417228027" pos="0.6944999999999989 0.09839987365202225 0.0035459915582183995" fullinertia="9.509060396251077e-05 0.0002510152481522414 0.0003438571436064908 -2.5784920687517184e-18 -1.5487577024099385e-19 -2.7953203965435524e-07" />
+                    </body>
+                    <body name="Table_Assy_Chute_03" pos="0.052250197846483104 0.02499999999999986 0.172" euler="3.141592653589793 1.2246467991469063e-16 3.1415926535897905">
+                        <geom name="Table_Assy_Chute_03_geom" type="mesh" mesh="Table_Assy_Chute_03" pos="0 0 0" euler="0 0 0" />
+                        <inertial mass="0.08184450417228083" pos="-0.0014999999999985546 0.0982192038653607 -0.6895458185926816" fullinertia="5.776613298771882e-05 5.4695778536020676e-05 0.00011110755509358109 1.387012602456787e-17 -6.97001207037056e-18 1.6839673550891387e-07" />
+                    </body>
+                </body>
+            </body>
+            <body name="Table_Assy_pedestal" pos="-0.05000000000000021 -9.947598300641404e-16 -3.552713678800501e-16" euler="-6.794064546215964e-29 9.989829047051058e-31 -1.180301514317687e-15">
+                <geom name="Table_Assy_pedestal_geom" type="mesh" mesh="Table_Assy_pedestal" pos="0 0 0" euler="0 0 0" />
+                <inertial mass="1045.1586555" pos="-1.1948000000001227 -0.4149990000000804 0.003499999999952306" fullinertia="99.82214512470406 25.86924446160875 89.94539583023197 -9.673379707214566e-14 1.0075912062680834e-13 -3.775674878662484e-14" />
+            </body>
+        </body>
+        <body name="Table_Assy_Vibration_Table_Top_Plate" pos="0.182047312957584 0.28012025033392646 0.977700066093412" euler="-1.5707963267948697 -8.073498326871293e-30 -3.1415926535897927">
+            <geom name="Table_Assy_Vibration_Table_Top_Plate_geom" type="mesh" mesh="Table_Assy_Vibration_Table_Top_Plate" pos="0 0 0" euler="0 0 0" />
+            <inertial mass="1.6515666860958036" pos="-0.001499999999949385 -0.1474318920041807 0.6165682707926011" fullinertia="0.029214441885357267 0.028540995527042923 0.01795837144115288 -6.60940717647265e-15 -7.21118904986594e-15 -0.004676561117027137" />
+            <body name="Table_Assy_Vibration_Table_Cover" pos="-7.105427357601002e-17 -0.09250000000000014 -0.17800000000000027" euler="-3.141592653589793 -1.5707963267948963 0">
+                <geom name="Table_Assy_Vibration_Table_Cover_geom" type="mesh" mesh="Table_Assy_Vibration_Table_Cover" pos="0 0 0" euler="0 0 0" />
+                <inertial mass="0.20545240091701503" pos="0.6994876714226026 0.05964733674038033 -0.0009966140869704541" fullinertia="0.0012723533214168965 0.0005704094333601356 0.0007159203050556839 1.6535157416413207e-05 -9.073985887462761e-07 5.996540858289918e-06" />
+            </body>
+        </body>
+    </worldbody>
+</mujoco>

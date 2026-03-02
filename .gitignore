@@ -9,3 +9,5 @@ data/
 .mypy_cache/
 .ruff_cache
 .vscode/
+trossen_arm_mujoco.egg-info
+.vscode

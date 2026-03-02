@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="JONY_SOFI">
+    <link name="origin_plane">
+    <visual>
+        <geometry>
+        <box size="1.0 1.0 0.01"/>
+        </geometry>
+        <material name="transparent_blue">
+        <color rgba="0 0 1 1.0"/>
+        </material>
+    </visual>
+    </link>
+    <link name="Table_Assy_Side_Plates_Right">
+        <inertial>
+            <origin xyz="-0.0007499999999893845 0.40445942661807954 -0.2187212239363997" rpy="0.0 -0.0 0.0" />
+            <mass value="3.350217887586701" />
+            <inertia ixx="0.17499722333375622" iyy="0.06425169768167738" izz="0.11074678198378762" ixy="-2.6107588313450947e-15" iyz="0.026155786845205364" ixz="6.919378264802489e-15" />
+        </inertial>
+        <visual name="Table_Assy_Side_Plates_visual">
+            <origin xyz="-0.5770000000000133 0.3488000000000009 9.99999972890464e-07" rpy="1.5707963267949439 2.2552107587454288e-29 -1.5707963267948952" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Side_Plates_collision">
+            <origin xyz="-0.5770000000000133 0.3488000000000009 9.99999972890464e-07" rpy="1.5707963267949439 2.2552107587454288e-29 -1.5707963267948952" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Front_Weld_Plate">
+        <inertial>
+            <origin xyz="-0.5755000000000122 -0.06370000000000005 -0.0007500000000008669" rpy="0.0 -0.0 0.0" />
+            <mass value="1.7596488000000012" />
+            <inertia ixx="0.0023803663805739284" iyy="0.1942657040915503" izz="0.19664541060382446" ixy="-1.1102230246251565e-16" iyz="-5.040733170555842e-44" ixz="2.538117285788566e-16" />
+        </inertial>
+        <visual name="Table_Assy_Front_Weld_Plate_visual">
+            <origin xyz="-0.5755000000000124 -0.06369999999999991 -8.66806626476091e-16" rpy="-1.5707963267948952 -2.052954370819254e-30 1.5707963267948972" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Front_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Front_Weld_Plate_collision">
+            <origin xyz="-0.5755000000000124 -0.06369999999999991 -8.66806626476091e-16" rpy="-1.5707963267948952 -2.052954370819254e-30 1.5707963267948972" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Front_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Top_Weld_Plate">
+        <inertial>
+            <origin xyz="0.5755000000000111 0.1625640289089037 -0.0007499999998961471" rpy="0.0 -3.01728983822633e-99 0.0" />
+            <mass value="4.498557179377005" />
+            <inertia ixx="0.039574858745314856" iyy="0.49912044995102534" izz="0.5386936217373992" ixy="-4.4408920984998205e-16" iyz="-4.440892098500626e-16" ixz="-9.686407295642937e-14" />
+        </inertial>
+        <visual name="Table_Assy_Top_Weld_Plate_visual">
+            <origin xyz="0.5755000000000112 0.162499999999999 1.0373923942097462e-13" rpy="-1.5707963267947158 -2.941932551250893e-28 -1.570796326794895" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Top_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Top_Weld_Plate_collision">
+            <origin xyz="0.5755000000000112 0.162499999999999 1.0373923942097462e-13" rpy="-1.5707963267947158 -2.941932551250893e-28 -1.570796326794895" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Top_Weld_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Top_Panel">
+        <inertial>
+            <origin xyz="-0.324278425860428 -0.5797508128329428 0.0007499999999998863" rpy="0.0 -0.0 0.0" />
+            <mass value="8.638872154823732" />
+            <inertia ixx="0.9774087280735433" iyy="0.3333614497997788" izz="1.3107669382962661" ixy="0.003548477735864126" iyz="8.881784197001252e-16" ixz="-8.098747185051474e-16" />
+        </inertial>
+        <visual name="Table_Assy_Top_Panel_visual">
+            <origin xyz="-0.34880000000000094 -0.5769999999999871 0.0014999999999997726" rpy="-1.5707963267948961 -6.178632484870468e-16 -1.2471177193234785e-15" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Top_Panel.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Top_Panel_collision">
+            <origin xyz="-0.34880000000000094 -0.5769999999999871 0.0014999999999997726" rpy="-1.5707963267948961 -6.178632484870468e-16 -1.2471177193234785e-15" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Top_Panel.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Rear_Panel">
+        <inertial>
+            <origin xyz="-0.5754839267165016 0.014981156811092617 0.25000714368150495" rpy="0.0 -0.0 0.0" />
+            <mass value="7.256241530271713" />
+            <inertia ixx="0.15124404386700085" iyy="1.0292714099498497" izz="0.8782510928162752" ixy="-8.972968945641924e-08" iyz="-3.987989405374037e-08" ixz="2.56597909560341e-05" />
+        </inertial>
+        <visual name="Table_Assy_Rear_Panel_visual">
+            <origin xyz="-0.5754999999999887 0.015000500000038315 0.25000000000000255" rpy="-6.748414464176674e-14 -1.5707963267948926 0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Rear_Panel.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Rear_Panel_collision">
+            <origin xyz="-0.5754999999999887 0.015000500000038315 0.25000000000000255" rpy="-6.748414464176674e-14 -1.5707963267948926 0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Rear_Panel.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Back_Plate_Exhaust">
+        <inertial>
+            <origin xyz="0.5739999999999941 0.1999999999999804 -0.014978768719896892" rpy="0.0 -0.0 0.0" />
+            <mass value="7.238477149720478" />
+            <inertia ixx="0.15088043471561718" iyy="0.8717592175039526" izz="1.0224159532284727" ixy="2.1760371282653068e-13" iyz="-5.329070518200751e-15" ixz="-8.881784197001252e-16" />
+        </inertial>
+        <visual name="Table_Assy_Back_Plate_Exhaust_visual">
+            <origin xyz="0.573999999999983 0.19999999999992654 -0.015000000000066934" rpy="-1.5707963267948981 -6.123233995734864e-17 1.570796326794898" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Back_Plate_Exhaust.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Back_Plate_Exhaust_collision">
+            <origin xyz="0.573999999999983 0.19999999999992654 -0.015000000000066934" rpy="-1.5707963267948981 -6.123233995734864e-17 1.570796326794898" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Back_Plate_Exhaust.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Side_Plates_Left">
+        <inertial>
+            <origin xyz="-0.0007499999999882334 -0.40445942661807777 -0.2187212239363997" rpy="0.0 -0.0 0.0" />
+            <mass value="3.350217887586701" />
+            <inertia ixx="0.17499722333375622" iyy="0.06425169768167649" izz="0.11074678198378773" ixy="4.564961985962129e-60" iyz="-0.026155786845205142" ixz="-8.881784197001252e-16" />
+        </inertial>
+        <visual name="Table_Assy_Side_Plates_visual">
+            <origin xyz="0.5755000000000127 -0.3487999999999991 1.0000000334287052e-06" rpy="1.5707963267948388 7.526946357828633e-29 1.5707963267948981" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Side_Plates_collision">
+            <origin xyz="0.5755000000000127 -0.3487999999999991 1.0000000334287052e-06" rpy="1.5707963267948388 7.526946357828633e-29 1.5707963267948981" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Side_Plates.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_bottom_box">
+        <inertial>
+            <origin xyz="-0.0008000000001243591 -0.4499990000000819 0.001999999999952442" rpy="0.0 0.0 0.0" />
+            <mass value="5654.825999999999" />
+            <inertia ixx="1004.9097037499992" iyy="851.4829647179995" izz="609.9747709679996" ixy="-5.221503255811403e-13" iyz="3.6968191347817994e-13" ixz="-6.218457981677879e-14" />
+        </inertial>
+        <visual name="Table_Assy_bottom_box_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_bottom_box.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_bottom_box_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_bottom_box.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Chute_01">
+        <inertial>
+            <origin xyz="-0.06804822917907086 0.03827380309604195 -0.02360286537352536" rpy="0.0 -0.0 0.0" />
+            <mass value="0.4016200251973849" />
+            <inertia ixx="0.0028299950399885976" iyy="0.005361750452761216" izz="0.00742025409657926" ixy="-0.0008355434112971016" iyz="-0.0004265341319401039" ixz="-0.0006737716338254679" />
+        </inertial>
+        <visual name="Table_Assy_Chute_01_visual">
+            <origin xyz="-0.02199999970955471 0.0945000000000222 -8.526512829121202e-16" rpy="-1.5707963267948974 2.1013278568865153e-16 -1.5707963267948972" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_01.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Chute_01_collision">
+            <origin xyz="-0.02199999970955471 0.0945000000000222 -8.526512829121202e-16" rpy="-1.5707963267948974 2.1013278568865153e-16 -1.5707963267948972" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_01.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Chute_02">
+        <inertial>
+            <origin xyz="-2.9044528560007166e-10 -0.004954008441760749 0.05139987365202245" rpy="0.0 -0.0 0.0" />
+            <mass value="0.13589450417228027" />
+            <inertia ixx="9.50906039624555e-05" iyy="0.0003438571436062965" izz="0.0002510152481522143" ixy="-3.469446951953614e-18" iyz="-2.7953203970976226e-07" ixz="6.938893903907228e-18" />
+        </inertial>
+        <visual name="Table_Assy_Chute_02_visual">
+            <origin xyz="-2.9044521454579807e-10 -0.00999999999997769 0.023000000000000256" rpy="1.5707963267948954 -8.17817045297799e-16 -3.1415926535897927" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_02.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Chute_02_collision">
+            <origin xyz="-2.9044521454579807e-10 -0.00999999999997769 0.023000000000000256" rpy="1.5707963267948954 -8.17817045297799e-16 -3.1415926535897927" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_02.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Chute_03">
+        <inertial>
+            <origin xyz="0.01461880215353915 -0.0049541811168719715 0.05121920386536075" rpy="0.0 -0.0 0.0" />
+            <mass value="0.08184450417228083" />
+            <inertia ixx="5.776613298766331e-05" iyy="0.00011110755509358139" izz="5.469577853603469e-05" ixy="-1.73495367560323e-18" iyz="-1.68396735503e-07" ixz="1.3952557355741206e-17" />
+        </inertial>
+        <visual name="Table_Assy_Chute_03_visual">
+            <origin xyz="0.014618802153539008 2.904451967822297e-10 0.023000000000000114" rpy="1.5707963267948974 -1.0959767281679403e-15 5.911526867434239e-16" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_03.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Chute_03_collision">
+            <origin xyz="0.014618802153539008 2.904451967822297e-10 0.023000000000000114" rpy="1.5707963267948974 -1.0959767281679403e-15 5.911526867434239e-16" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Chute_03.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Vibration_Table_Plate">
+        <inertial>
+            <origin xyz="0.08539041417579657 0.00014579097197444212 -0.01403090037165498" rpy="0.0 -0.0 0.0" />
+            <mass value="0.5560141130264267" />
+            <inertia ixx="0.009524294963456859" iyy="0.003437097044428794" izz="0.012758835493488552" ixy="1.762896335161246e-08" iyz="-1.3483128780134024e-09" ixz="-7.897336272710831e-07" />
+        </inertial>
+        <visual name="Table_Assy_Vibration_Table_Plate_visual">
+            <origin xyz="0.08517293295758414 0.0001454196660999685 0.0" rpy="-1.5707963267948966 -6.123233995736738e-17 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Vibration_Table_Plate_collision">
+            <origin xyz="0.08517293295758414 0.0001454196660999685 0.0" rpy="-1.5707963267948966 -6.123233995736738e-17 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Vibration_Table_Top_Plate">
+        <inertial>
+            <origin xyz="4.914542317302199e-14 -0.07743189200418087 -0.07793172920739785" rpy="0.0 0.0 0.0" />
+            <mass value="1.6515666860958056" />
+            <inertia ixx="0.02921444188535638" iyy="0.0285409955270427" izz="0.01795837144115331" ixy="-6.498384874009944e-15" iyz="-0.004676561117026967" ixz="-7.238944625481749e-15" />
+        </inertial>
+        <visual name="Table_Assy_Vibration_Table_Top_Plate_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Top_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Vibration_Table_Top_Plate_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Top_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Vibration_Table_Cover">
+        <inertial>
+            <origin xyz="0.09949661704455563 0.09714733283380256 0.0019876710887034932" rpy="0.0 -0.0 0.0" />
+            <mass value="0.20545240091702227" />
+            <inertia ixx="0.0007159203050555729" iyy="0.0005704094333602097" izz="0.001272353321416897" ixy="-5.996540858296817e-06" iyz="1.653515741638356e-05" ixz="9.073985887467217e-07" />
+        </inertial>
+        <visual name="Table_Assy_Vibration_Table_Cover_visual">
+            <origin xyz="0.10000000295758385 0.10749999609342069 -0.00300000033389999" rpy="6.123233995736757e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Cover.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Vibration_Table_Cover_collision">
+            <origin xyz="0.10000000295758385 0.10749999609342069 -0.00300000033389999" rpy="6.123233995736757e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Vibration_Table_Cover.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_Mail_Spreader_Housing">
+        <inertial>
+            <origin xyz="0.07623461317176912 0.029343537450022696 0.025532409694312294" rpy="0.0 -0.0 0.0" />
+            <mass value="0.9679744461417294" />
+            <inertia ixx="0.0032294985478555915" iyy="0.01087212481692168" izz="0.012962328429892256" ixy="-4.483149662448671e-06" iyz="6.586091190752263e-07" ixz="-9.849946737583437e-06" />
+        </inertial>
+        <visual name="Table_Assy_Mail_Spreader_Housing_visual">
+            <origin xyz="0.08338460897242107 0.029390930868710044 0.015" rpy="1.5707963267948934 -1.3582208683379453e-15 1.5707963267948244" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Mail_Spreader_Housing.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_Mail_Spreader_Housing_collision">
+            <origin xyz="0.08338460897242107 0.029390930868710044 0.015" rpy="1.5707963267948934 -1.3582208683379453e-15 1.5707963267948244" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_Mail_Spreader_Housing.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Table_Assy_M0_Top_Plate">
+        <inertial>
+            <origin xyz="0.16467828860658415 0.07846618105208979 3.468746242944576e-05" rpy="0.0 -0.0 0.0" />
+            <mass value="0.1465485002491543" />
+            <inertia ixx="0.00035939925069478074" iyy="0.0013863056088074255" izz="0.0017429196396764463" ixy="-5.4639505480506834e-05" iyz="1.8593354955201424e-06" ixz="-7.606712999402854e-06" />
+        </inertial>
+        <visual name="Table_Assy_M0_Top_Plate_visual">
+            <origin xyz="0.15999999897242093 0.07500000086870987 1.4210854715202004e-16" rpy="1.5707963267948997 1.3582208683379453e-15 -1.570796326794969" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_M0_Top_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Table_Assy_M0_Top_Plate_collision">
+            <origin xyz="0.15999999897242093 0.07500000086870987 1.4210854715202004e-16" rpy="1.5707963267948997 1.3582208683379453e-15 -1.570796326794969" />
+            <geometry>
+                <mesh filename="meshes/Table_Assy_M0_Top_Plate.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="origin_plane_joint" type="fixed">
+        <parent link="Table_Assy_bottom_box"/>
+        <child link="origin_plane"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    <joint name="side_plate_l_and_top_panel" type="fixed">
+        <origin xyz="0.0 0.0 0.0015000000000000568" rpy="3.1415926535897927 3.8175499383096226e-32 1.5707963267948968" />
+        <parent link="Table_Assy_Top_Panel" />
+        <child link="Table_Assy_Side_Plates_Left" />
+    </joint>
+    <joint name="side_plate_r_and_top_panel" type="fixed">
+        <origin xyz="7.13318293321663e-17 -1.1540000000000001 0.0015000000000000568" rpy="-3.1415926535897927 -3.8175499383096226e-32 -1.5707963267948966" />
+        <parent link="Table_Assy_Top_Panel" />
+        <child link="Table_Assy_Side_Plates_Right" />
+    </joint>
+    <joint name="rear_panel_and_top_weld_plate" type="fixed">
+        <origin xyz="1.1525 0.1625 2.091837814077735e-13" rpy="1.4973882581514978e-43 -1.814616832864256e-13 0.0" />
+        <parent link="Table_Assy_Top_Weld_Plate" />
+        <child link="Table_Assy_Rear_Panel" />
+    </joint>
+    <joint name="top_weld_plate_and_side_plate_l" type="fixed">
+        <origin xyz="-1.1525 -0.6976000000000001 -0.49999899999999997" rpy="-1.2382637036252669e-43 1.814616832864256e-13 2.2459163934980737e-56" />
+        <parent link="Table_Assy_Side_Plates_Left" />
+        <child link="Table_Assy_Top_Weld_Plate" />
+    </joint>
+    <joint name="front_weld_plate_and_side_plate_right" type="fixed">
+        <origin xyz="-0.0015 0.0 0.0" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="Table_Assy_Side_Plates_Right" />
+        <child link="Table_Assy_Front_Weld_Plate" />
+    </joint>
+    <joint name="top_panel_and_bottom_box" type="fixed">
+        <origin xyz="-0.34880000000012373 9.99999918604999e-07 0.57699999999994" rpy="1.5707963267948961 -1.2471177193235153e-15 3.1415926535897927" />
+        <parent link="Table_Assy_bottom_box" />
+        <child link="Table_Assy_Top_Panel" />
+    </joint>
+    <joint name="vib_table_cover_and_vib_table_top_plate" type="fixed">
+        <origin xyz="0.10000000295758385 0.014999996093420976 -0.17499999966610014" rpy="1.759171807375103e-32 -7.65558251712508e-16 -3.141592653589793" />
+        <parent link="Table_Assy_Vibration_Table_Top_Plate" />
+        <child link="Table_Assy_Vibration_Table_Cover" />
+    </joint>
+    <joint name="vib_table_plate_and_top_panel" type="fixed">
+        <origin xyz="-0.2817656699999999 -1.05562562 0.0014999999999999148" rpy="3.1415926535897927 3.8175499383096226e-32 1.5707963267948968" />
+        <parent link="Table_Assy_Top_Panel" />
+        <child link="Table_Assy_Vibration_Table_Plate" />
+    </joint>
+    <joint name="chute_right_and_chute_base" type="fixed">
+        <origin xyz="-0.02200000000000003 0.21899999999999992 -0.0019999999999998864" rpy="-3.141592653589793 5.139690274734881e-45 3.141592653589793" />
+        <parent link="Table_Assy_Chute_01" />
+        <child link="Table_Assy_Chute_02" />
+    </joint>
+    <joint name="mail_housing_and_top_panel" type="fixed">
+        <origin xyz="-0.3475241599999999 -0.6718080599999999 0.0014999999999997726" rpy="-6.178632484870436e-16 3.8175499383096226e-32 1.5707963267948968" />
+        <parent link="Table_Assy_Top_Panel" />
+        <child link="Table_Assy_Mail_Spreader_Housing" />
+    </joint>
+    <joint name="mail_top_plate_and_mail_housing" type="fixed">
+        <origin xyz="-0.07661539000000005 -0.04560906999999997 0.08949999999999989" rpy="3.17712501680571e-32 -0.0 0.0" />
+        <parent link="Table_Assy_Mail_Spreader_Housing" />
+        <child link="Table_Assy_M0_Top_Plate" />
+    </joint>
+    <joint name="chute_base_and_top_panel" type="fixed">
+        <origin xyz="-0.24597562999999997 -0.08150000000000006 0.0014999999999999148" rpy="3.141592653589793 -6.178632484870436e-16 6.178632484870436e-17" />
+        <parent link="Table_Assy_Top_Panel" />
+        <child link="Table_Assy_Chute_01" />
+    </joint>
+    <joint name="chute_front_and_chute_base" type="fixed">
+        <origin xyz="0.15 0.027630999999999944 -0.0019999999999998864" rpy="3.141592653589793 1.3670076544845265e-15 1.5707963267948966" />
+        <parent link="Table_Assy_Chute_01" />
+        <child link="Table_Assy_Chute_03" />
+    </joint>
+    <joint name="back_plate_and_side_plate_r" type="fixed">
+        <origin xyz="-0.0015 0.6796000000000001 -0.04999899999999997" rpy="-1.5707963267948966 -0.0 3.141592653589793" />
+        <parent link="Table_Assy_Side_Plates_Right" />
+        <child link="Table_Assy_Back_Plate_Exhaust" />
+    </joint>
+</robot>

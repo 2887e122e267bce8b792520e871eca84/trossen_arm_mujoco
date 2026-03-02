@@ -1,0 +1,278 @@
+<mujoco model="Downdraft_Assy">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <material name="254,254,255" specular="0.9973853333333333" shininess="1.0" rgba="0.996078 0.996078 1.000000 1.000000"/>
+    <material name="244,244,244" specular="0.9568629999999999" shininess="1.0" rgba="0.956863 0.956863 0.956863 1.000000"/>
+    <material name="10,10,10" specular="0.039216" shininess="1.0" rgba="0.039216 0.039216 0.039216 1.000000"/>
+    <material name="175,175,175" specular="0.0" shininess="0.5" rgba="0.686275 0.686275 0.686275 1.000000"/>
+    <material name="175,175,175_1" specular="0.0" shininess="0.5" rgba="0.686275 0.686275 0.686275 1.000000"/>
+    <material name="236,241,239" specular="1.0" shininess="1.0" rgba="0.925490 0.945098 0.937255 0.660000"/>
+    <material name="175,175,175_2" specular="0.0" shininess="0.5" rgba="0.686275 0.686275 0.686275 1.000000"/>
+    <material name="190,188,186" specular="0.7372549999999999" shininess="1.0" rgba="0.745098 0.737255 0.729412 1.000000"/>
+    <material name="16,171,74" specular="1.0" shininess="1.0" rgba="0.062745 0.670588 0.290196 0.520000"/>
+    <material name="48,135,227" specular="1.0" shininess="1.0" rgba="0.188235 0.529412 0.890196 1.000000"/>
+    <material name="82,105,43" specular="1.0" shininess="1.0" rgba="0.321569 0.411765 0.168627 1.000000"/>
+    <material name="64,64,64" specular="1.0" shininess="0.2" rgba="0.250980 0.250980 0.250980 1.000000"/>
+    <material name="192,192,192" specular="1.0" shininess="0.2" rgba="0.752941 0.752941 0.752941 1.000000"/>
+    <material name="191,191,191" specular="0.0" shininess="0.3" rgba="0.749020 0.749020 0.749020 1.000000"/>
+    <material name="115,148,64" specular="0.0" shininess="0.300000019" rgba="0.450980 0.580392 0.250980 1.000000"/>
+    <material name="190,188,186_1" specular="0.7372549999999999" shininess="1.0" rgba="0.745098 0.737255 0.729412 1.000000"/>
+    <material name="131,88,197" specular="0.0" shininess="0.300000019" rgba="0.513725 0.345098 0.772549 1.000000"/>
+    <texture type="2d" name="Pine" file="Pine.png"/>
+    <material name="246,164,49" texture="Pine" specular="1.0" shininess="1.0"/>
+    <material name="5,5,5" specular="1.0" shininess="1.0" rgba="0.019608 0.019608 0.019608 1.000000"/>
+    <material name="244,244,244_1" specular="0.9568629999999999" shininess="1.0" rgba="0.956863 0.956863 0.956863 1.000000"/>
+    <material name="25,25,25" specular="1.0" shininess="0.2" rgba="0.098039 0.098039 0.098039 1.000000"/>
+    <material name="160,160,160" specular="1.0" shininess="0.2" rgba="0.627451 0.627451 0.627451 1.000000"/>
+    <material name="245,245,246" specular="1.0" shininess="0.2" rgba="0.960784 0.960784 0.964706 1.000000"/>
+    <material name="5,5,5_1" specular="1.0" shininess="1.0" rgba="0.019608 0.019608 0.019608 1.000000"/>
+    <material name="203,154,59" specular="0.543791" shininess="1.0" rgba="0.796078 0.603922 0.231373 1.000000"/>
+    <mesh file="Downdraft_Assy_0.obj"/>
+    <mesh file="Downdraft_Assy_1.obj"/>
+    <mesh file="Downdraft_Assy_2.obj"/>
+    <mesh file="Downdraft_Assy_3.obj"/>
+    <mesh file="Downdraft_Assy_4.obj"/>
+    <mesh file="Downdraft_Assy_5.obj"/>
+    <mesh file="Downdraft_Assy_6.obj"/>
+    <mesh file="Downdraft_Assy_7.obj"/>
+    <mesh file="Downdraft_Assy_8.obj"/>
+    <mesh file="Downdraft_Assy_9.obj"/>
+    <mesh file="Downdraft_Assy_10.obj"/>
+    <mesh file="Downdraft_Assy_11.obj"/>
+    <mesh file="Downdraft_Assy_12.obj"/>
+    <mesh file="Downdraft_Assy_13.obj"/>
+    <mesh file="Downdraft_Assy_14.obj"/>
+    <mesh file="Downdraft_Assy_15.obj"/>
+    <mesh file="Downdraft_Assy_16.obj"/>
+    <mesh file="Downdraft_Assy_17.obj"/>
+    <mesh file="Downdraft_Assy_18.obj"/>
+    <mesh file="Downdraft_Assy_19.obj"/>
+    <mesh file="Downdraft_Assy_20.obj"/>
+    <mesh file="Downdraft_Assy_21.obj"/>
+    <mesh file="Downdraft_Assy_22.obj"/>
+    <mesh file="Downdraft_Assy_23.obj"/>
+    <mesh file="Downdraft_Assy_24.obj"/>
+    <mesh file="Downdraft_Assy_collision_0.obj"/>
+    <mesh file="Downdraft_Assy_collision_1.obj"/>
+    <mesh file="Downdraft_Assy_collision_2.obj"/>
+    <mesh file="Downdraft_Assy_collision_3.obj"/>
+    <mesh file="Downdraft_Assy_collision_4.obj"/>
+    <mesh file="Downdraft_Assy_collision_5.obj"/>
+    <mesh file="Downdraft_Assy_collision_6.obj"/>
+    <mesh file="Downdraft_Assy_collision_7.obj"/>
+    <mesh file="Downdraft_Assy_collision_8.obj"/>
+    <mesh file="Downdraft_Assy_collision_9.obj"/>
+    <mesh file="Downdraft_Assy_collision_10.obj"/>
+    <mesh file="Downdraft_Assy_collision_11.obj"/>
+    <mesh file="Downdraft_Assy_collision_12.obj"/>
+    <mesh file="Downdraft_Assy_collision_13.obj"/>
+    <mesh file="Downdraft_Assy_collision_14.obj"/>
+    <mesh file="Downdraft_Assy_collision_15.obj"/>
+    <mesh file="Downdraft_Assy_collision_16.obj"/>
+    <mesh file="Downdraft_Assy_collision_17.obj"/>
+    <mesh file="Downdraft_Assy_collision_18.obj"/>
+    <mesh file="Downdraft_Assy_collision_19.obj"/>
+    <mesh file="Downdraft_Assy_collision_20.obj"/>
+    <mesh file="Downdraft_Assy_collision_21.obj"/>
+    <mesh file="Downdraft_Assy_collision_22.obj"/>
+    <mesh file="Downdraft_Assy_collision_23.obj"/>
+    <mesh file="Downdraft_Assy_collision_24.obj"/>
+    <mesh file="Downdraft_Assy_collision_25.obj"/>
+    <mesh file="Downdraft_Assy_collision_26.obj"/>
+    <mesh file="Downdraft_Assy_collision_27.obj"/>
+    <mesh file="Downdraft_Assy_collision_28.obj"/>
+    <mesh file="Downdraft_Assy_collision_29.obj"/>
+    <mesh file="Downdraft_Assy_collision_30.obj"/>
+    <mesh file="Downdraft_Assy_collision_31.obj"/>
+    <mesh file="Downdraft_Assy_collision_32.obj"/>
+    <mesh file="Downdraft_Assy_collision_33.obj"/>
+    <mesh file="Downdraft_Assy_collision_34.obj"/>
+    <mesh file="Downdraft_Assy_collision_35.obj"/>
+    <mesh file="Downdraft_Assy_collision_36.obj"/>
+    <mesh file="Downdraft_Assy_collision_37.obj"/>
+    <mesh file="Downdraft_Assy_collision_38.obj"/>
+    <mesh file="Downdraft_Assy_collision_39.obj"/>
+    <mesh file="Downdraft_Assy_collision_40.obj"/>
+    <mesh file="Downdraft_Assy_collision_41.obj"/>
+    <mesh file="Downdraft_Assy_collision_42.obj"/>
+    <mesh file="Downdraft_Assy_collision_43.obj"/>
+    <mesh file="Downdraft_Assy_collision_44.obj"/>
+    <mesh file="Downdraft_Assy_collision_45.obj"/>
+    <mesh file="Downdraft_Assy_collision_46.obj"/>
+    <mesh file="Downdraft_Assy_collision_47.obj"/>
+    <mesh file="Downdraft_Assy_collision_48.obj"/>
+    <mesh file="Downdraft_Assy_collision_49.obj"/>
+    <mesh file="Downdraft_Assy_collision_50.obj"/>
+    <mesh file="Downdraft_Assy_collision_51.obj"/>
+    <mesh file="Downdraft_Assy_collision_52.obj"/>
+    <mesh file="Downdraft_Assy_collision_53.obj"/>
+    <mesh file="Downdraft_Assy_collision_54.obj"/>
+    <mesh file="Downdraft_Assy_collision_55.obj"/>
+    <mesh file="Downdraft_Assy_collision_56.obj"/>
+    <mesh file="Downdraft_Assy_collision_57.obj"/>
+    <mesh file="Downdraft_Assy_collision_58.obj"/>
+    <mesh file="Downdraft_Assy_collision_59.obj"/>
+    <mesh file="Downdraft_Assy_collision_60.obj"/>
+    <mesh file="Downdraft_Assy_collision_61.obj"/>
+    <mesh file="Downdraft_Assy_collision_62.obj"/>
+    <mesh file="Downdraft_Assy_collision_63.obj"/>
+    <mesh file="Downdraft_Assy_collision_64.obj"/>
+    <mesh file="Downdraft_Assy_collision_65.obj"/>
+    <mesh file="Downdraft_Assy_collision_66.obj"/>
+    <mesh file="Downdraft_Assy_collision_67.obj"/>
+    <mesh file="Downdraft_Assy_collision_68.obj"/>
+    <mesh file="Downdraft_Assy_collision_69.obj"/>
+    <mesh file="Downdraft_Assy_collision_70.obj"/>
+    <mesh file="Downdraft_Assy_collision_71.obj"/>
+    <mesh file="Downdraft_Assy_collision_72.obj"/>
+    <mesh file="Downdraft_Assy_collision_73.obj"/>
+    <mesh file="Downdraft_Assy_collision_74.obj"/>
+    <mesh file="Downdraft_Assy_collision_75.obj"/>
+    <mesh file="Downdraft_Assy_collision_76.obj"/>
+    <mesh file="Downdraft_Assy_collision_77.obj"/>
+    <mesh file="Downdraft_Assy_collision_78.obj"/>
+    <mesh file="Downdraft_Assy_collision_79.obj"/>
+    <mesh file="Downdraft_Assy_collision_80.obj"/>
+    <mesh file="Downdraft_Assy_collision_81.obj"/>
+    <mesh file="Downdraft_Assy_collision_82.obj"/>
+    <mesh file="Downdraft_Assy_collision_83.obj"/>
+    <mesh file="Downdraft_Assy_collision_84.obj"/>
+    <mesh file="Downdraft_Assy_collision_85.obj"/>
+    <mesh file="Downdraft_Assy_collision_86.obj"/>
+    <mesh file="Downdraft_Assy_collision_87.obj"/>
+    <mesh file="Downdraft_Assy_collision_88.obj"/>
+    <mesh file="Downdraft_Assy_collision_89.obj"/>
+    <mesh file="Downdraft_Assy_collision_90.obj"/>
+    <mesh file="Downdraft_Assy_collision_91.obj"/>
+    <mesh file="Downdraft_Assy_collision_92.obj"/>
+  </asset>
+  <worldbody>
+    <body name="Downdraft_Assy">
+      <geom mesh="Downdraft_Assy_0" material="203,154,59" class="visual"/>
+      <geom mesh="Downdraft_Assy_1" material="5,5,5_1" class="visual"/>
+      <geom mesh="Downdraft_Assy_2" material="245,245,246" class="visual"/>
+      <geom mesh="Downdraft_Assy_3" material="160,160,160" class="visual"/>
+      <geom mesh="Downdraft_Assy_4" material="25,25,25" class="visual"/>
+      <geom mesh="Downdraft_Assy_5" material="244,244,244_1" class="visual"/>
+      <geom mesh="Downdraft_Assy_6" material="5,5,5" class="visual"/>
+      <geom mesh="Downdraft_Assy_7" material="246,164,49" class="visual"/>
+      <geom mesh="Downdraft_Assy_8" material="131,88,197" class="visual"/>
+      <geom mesh="Downdraft_Assy_9" material="190,188,186_1" class="visual"/>
+      <geom mesh="Downdraft_Assy_10" material="115,148,64" class="visual"/>
+      <geom mesh="Downdraft_Assy_11" material="191,191,191" class="visual"/>
+      <geom mesh="Downdraft_Assy_12" material="192,192,192" class="visual"/>
+      <geom mesh="Downdraft_Assy_13" material="64,64,64" class="visual"/>
+      <geom mesh="Downdraft_Assy_14" material="82,105,43" class="visual"/>
+      <geom mesh="Downdraft_Assy_15" material="48,135,227" class="visual"/>
+      <geom mesh="Downdraft_Assy_16" material="16,171,74" class="visual"/>
+      <geom mesh="Downdraft_Assy_17" material="190,188,186" class="visual"/>
+      <geom mesh="Downdraft_Assy_18" material="175,175,175_2" class="visual"/>
+      <geom mesh="Downdraft_Assy_19" material="236,241,239" class="visual"/>
+      <geom mesh="Downdraft_Assy_20" material="175,175,175_1" class="visual"/>
+      <geom mesh="Downdraft_Assy_21" material="175,175,175" class="visual"/>
+      <geom mesh="Downdraft_Assy_22" material="10,10,10" class="visual"/>
+      <geom mesh="Downdraft_Assy_23" material="244,244,244" class="visual"/>
+      <geom mesh="Downdraft_Assy_24" material="254,254,255" class="visual"/>
+      <geom mesh="Downdraft_Assy_collision_0" rgba="0.3147118310649516 0.9413889795570531 0.4936112163958202 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_1" rgba="0.9342085514836598 0.07452107714027079 0.6867625596527203 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_2" rgba="0.743785730010315 0.6399227658741616 0.8015128380581048 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_3" rgba="0.2936813541821789 0.8706663473443071 0.2689563766939077 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_4" rgba="0.6757866504339937 0.6514688873843886 0.32447390751156446 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_5" rgba="0.8498341545232426 0.588442240536917 0.017359860688764273 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_6" rgba="0.4498746049107025 0.6410893101296703 0.9066137428818363 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_7" rgba="0.01265227791493484 0.8466183571440072 0.8511671894989329 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_8" rgba="0.9210638449624032 0.20630272474813582 0.4694327457122349 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_9" rgba="0.2751162469056009 0.24712661870971564 0.44262672271987025 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_10" rgba="0.28261274605445375 0.859225640700326 0.452549257054383 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_11" rgba="0.050817632961033365 0.973924691070741 0.7625890024831051 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_12" rgba="0.6848901367138979 0.776760338746473 0.20923879432349446 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_13" rgba="0.7027795643888958 0.24302853525606982 0.9184130801014979 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_14" rgba="0.5235668198669015 0.7013373306786557 0.6102374551083216 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_15" rgba="0.4385054497393245 0.1543349300725383 0.9163228377735654 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_16" rgba="0.046847537941225315 0.1622565962512762 0.46940923907477905 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_17" rgba="0.11285268584347541 0.520068206612336 0.3764472091732064 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_18" rgba="0.6565304401918017 0.9613892983174771 0.39872463486511955 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_19" rgba="0.2535893711757423 0.028056781563504107 0.5258748069014646 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_20" rgba="0.8487996109214101 0.12748817776065746 0.6872773767592361 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_21" rgba="0.7694590628283228 0.20380324597633492 0.8982966019345887 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_22" rgba="0.6309718381041287 0.729475898904414 0.46506313479720973 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_23" rgba="0.8017857998763529 0.4468119645780153 0.661626175001925 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_24" rgba="0.5892120547417407 0.1669750962703228 0.05703864469267206 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_25" rgba="0.5071167455518458 0.23771332510168175 0.9694298867683012 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_26" rgba="0.007121217788814249 0.007664514338516448 0.8936115479025462 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_27" rgba="0.48625502837232937 0.7868698686158037 0.5481124251999049 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_28" rgba="0.8516241096122614 0.8693114908347286 0.020766667559885432 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_29" rgba="0.18109787680693623 0.27719399846068715 0.9071249649040264 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_30" rgba="0.5810637793718246 0.3578679972053408 0.3060901649873111 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_31" rgba="0.7963989997119606 0.17076036192333277 0.7743536937847685 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_32" rgba="0.38851867555194575 0.011172006007600266 0.8005092634350375 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_33" rgba="0.4422104136103574 0.022860739423950394 0.559451302844433 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_34" rgba="0.025907981929079393 0.9591768743264533 0.2800329018749348 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_35" rgba="0.024600030561943487 0.35128789564515006 0.4549251573004447 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_36" rgba="0.31320139268664116 0.4684633616856192 0.18064707813701186 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_37" rgba="0.3555172600466737 0.49363475226803655 0.6245528853948321 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_38" rgba="0.2112619721692982 0.9137114555411374 0.10170314664545566 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_39" rgba="0.457409843367111 0.2000962062800843 0.06562453229604892 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_40" rgba="0.2626681498257484 0.2620988420231626 0.5381715325089789 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_41" rgba="0.7384227735457541 0.9159188435894647 0.012102407173029794 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_42" rgba="0.2218792003457173 0.6876554207713068 0.7370207130871103 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_43" rgba="0.26544192380125975 0.49455953838317834 0.3887992418338788 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_44" rgba="0.2688038781048965 0.3885421376603855 0.7921268370030132 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_45" rgba="0.4777323076574326 0.32764569685860223 0.5262473641302116 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_46" rgba="0.806469741017058 0.5352971612385575 0.4438438827122717 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_47" rgba="0.8890933372925638 0.8419733544880299 0.6261487470837189 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_48" rgba="0.5517451129650122 0.7837454753292358 0.6824071442624503 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_49" rgba="0.28289595268788714 0.3768066753931407 0.22409779796526852 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_50" rgba="0.07080780365656958 0.19229186874117066 0.2180246438623955 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_51" rgba="0.8281805137257292 0.5313763516507193 0.7303731310671925 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_52" rgba="0.5420664757624745 0.4934149366118086 0.8539242993267513 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_53" rgba="0.16984882557738012 0.4373602017141198 0.5738606103601479 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_54" rgba="0.1578201091321383 0.9660163251115528 0.27762905273823746 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_55" rgba="0.5515907895392386 0.2686340304212448 0.7182739811247937 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_56" rgba="0.2410384954889926 0.2434102671393935 0.6389530083520526 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_57" rgba="0.7210958507600521 0.39610743534127946 0.6688392505555028 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_58" rgba="0.9267259910797662 0.44193078728192003 0.9003322172154921 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_59" rgba="0.04998314634789991 0.5447968779330734 0.36003876173850413 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_60" rgba="0.25752431456042046 0.014194631888915787 0.5743886664339961 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_61" rgba="0.6356844222493805 0.7294582874288028 0.9624001084040753 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_62" rgba="0.6001555326250024 0.6783249320718634 0.23275763402248284 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_63" rgba="0.13095318777652076 0.15404673366476818 0.016490816670364672 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_64" rgba="0.5732773375217697 0.28901524741102425 0.5807383444710695 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_65" rgba="0.5876162553072923 0.18746005368003849 0.07335818613145217 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_66" rgba="0.6120901043263661 0.3688548061801341 0.41598097284262725 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_67" rgba="0.4680184461074728 0.09641600870502043 0.43437784664070167 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_68" rgba="0.049361496107735436 0.909863605211866 0.40338895490900006 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_69" rgba="0.6418664054999237 0.5186167817826811 0.10682694810728643 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_70" rgba="0.7894097545831176 0.0067162309824924105 0.08431071540379353 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_71" rgba="0.14795717893300286 0.5975211747233734 0.344277733822544 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_72" rgba="0.6486501615500865 0.8475694407118146 0.44912788997662223 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_73" rgba="0.24842070713946085 0.899511647686545 0.39872615674549994 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_74" rgba="0.10524991685988916 0.9340308148135721 0.8500841855963086 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_75" rgba="0.9754886084552206 0.03098563955304212 0.7678298741137307 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_76" rgba="0.21516556228667105 0.05040790377090898 0.19700159316609656 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_77" rgba="0.7619836363559777 0.43062115660135547 0.8094558068691876 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_78" rgba="0.9989050162812634 0.8807422750936243 0.24852912099655922 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_79" rgba="0.25146237332933474 0.7281225580313918 0.4341905266002952 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_80" rgba="0.512910264913935 0.7377551444074167 0.3786832139660251 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_81" rgba="0.5196281337791618 0.2523868092735678 0.08778609009067107 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_82" rgba="0.4216551130395113 0.33281499478913745 0.19049765485457293 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_83" rgba="0.21595266202532637 0.7518904856758237 0.2966021854792511 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_84" rgba="0.6680925462821805 0.4509559353153718 0.09480957341701679 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_85" rgba="0.1492864232278106 0.719081152195251 0.560988086471933 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_86" rgba="0.19873443630151977 0.19518233375674243 0.3314360668594828 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_87" rgba="0.17415431664519854 0.2408592869914291 0.6639524096594659 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_88" rgba="0.23194807061376654 0.979245513834243 0.22691518667835386 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_89" rgba="0.7398640132656034 0.22030914603950824 0.412520301736622 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_90" rgba="0.6712676330751464 0.9720186861420403 0.8127641706047029 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_91" rgba="0.6736298399802194 0.3417769596355902 0.02910787843224394 1" class="collision"/>
+      <geom mesh="Downdraft_Assy_collision_92" rgba="0.483691568074584 0.5697583496010273 0.2883570691239645 1" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

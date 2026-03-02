@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="box">
+    <link name="base">
+        <inertial>
+            <origin xyz="-5.225100769619248e-07 0.0015910512615918493 0.018157511912391792" rpy="0.0 0.0 0.0" />
+            <mass value="0.8200676346244169" />
+            <inertia ixx="0.0011883210753799087" iyy="0.0021404281957400433" izz="0.0028646359930203616" ixy="1.96716908604706e-08" iyz="-3.82851877555032e-05" ixz="1.257306844171677e-08" />
+        </inertial>
+        <visual name="base_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Lid">
+        <inertial>
+            <origin xyz="0.003987612405112389 -0.04727046184800195 0.06964307277489927" rpy="0.0 -0.0 0.0" />
+            <mass value="0.29821870743090273" />
+            <inertia ixx="0.0006956653417993236" iyy="0.0004924724197377165" izz="0.0002036722481585239" ixy="1.689656890575452e-07" iyz="4.86993286680353e-06" ixz="-2.62803475975811e-07" />
+        </inertial>
+        <visual name="Lid_visual">
+            <origin xyz="-0.047500000670552045 -0.04750000074505785 0.07" rpy="-0.0 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Lid.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Lid_collision">
+            <origin xyz="-0.047500000670552045 -0.04750000074505785 0.07" rpy="-0.0 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Lid.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Revolute-1" type="revolute">
+        <origin xyz="0.07 0.0475 0.0475" rpy="9.868649107779169e-17 -1.5707963267948966 0" />
+        <parent link="base" />
+        <child link="Lid" />
+        <axis xyz="0.0 9.868649107779169e-17 1.0" />
+        <limit lower="0.0" upper="3.141593" effort="1000000" velocity="1000000" />
+    </joint>
+</robot>
